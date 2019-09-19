@@ -1,0 +1,42 @@
+.footer {
+  padding-top: 10px;
+  background: #3874ac;
+  background: linear-gradient(to bottom,  #3874ac,#384d87);
+  color: #fff;
+
+  &__top {
+    margin-bottom: 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+
+      &::after {
+        background-color: #284171;
+      }
+    }
+  }
+
+  .main-nav__link {
+    white-space: nowrap;
+    padding: 8px 13px;
+    font-size: 11px;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__text {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  &__rights {
+    font-size: 11px;
+    background-color: #fff;
+  }
+}

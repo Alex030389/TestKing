@@ -1,0 +1,158 @@
+.header {
+  width: 100%;
+  position: relative;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3874ac+0,384d87+100 */
+  background: #3874ac;
+  background: linear-gradient(to bottom,  #3874ac,#384d87);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  padding-top: 15px;
+
+
+  flex-shrink: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    z-index: -1;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    margin-bottom: 3px;
+  }
+
+  &__logo {
+    width: 249px;
+    margin-left: 5px;
+  }
+
+  &__search {
+
+  }
+
+  &__mcafee {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &__box-nav {
+    background-color: #2C4D85;
+    background: linear-gradient(to right, rgba(44, 77, 133, 0) 10%,#2c4d85 40%,#2c4d85 50%,rgba(44, 77, 133, 0) 62%);
+  }
+
+  &__box-nav-wrap {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -5px;
+
+  &__input {
+    border: 1px solid #3870ab;
+    color: #1f63b1;
+    border-radius: 5px;
+    padding: 5px 5px 4px;
+    background-color: #AFC6DE;
+    box-shadow: inset 0px 1px 4px 1px rgba(0,0,0,0.3);
+    width: 184px;
+    margin-right: 5px;
+  }
+
+  &__btn {
+    width: 31px;
+  }
+}
+
+.mcafee {
+  width: 95px;
+}
+
+.main-nav {
+  color: #fff;
+  font-family: $ff-title;
+  display: flex;
+
+  &__item:not(:last-child) {
+    position: relative;
+    margin-right: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 2px;
+      height: 54%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 13px 17px 11px;
+    position: relative;
+
+
+    &:hover {
+      transition: .3s;
+      background-color: #284171;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  background-color: #64748f;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow: hidden;
+
+  &__item:not(:last-child) {
+    position: relative;
+    margin-right: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 2px;
+      height: 54%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+
+  &__link {
+    display: block;
+    color: #fff;
+    font-family: $ff-title;
+    padding: 13px 25px 11px;
+    background-color: rgba(72, 85, 105, 0);
+    transition: .3s;
+
+    &:hover {
+      background-color: #485569;
+    }
+  }
+
+
+}
