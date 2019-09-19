@@ -46,14 +46,33 @@
   }
 
   &__box-nav {
-    background-color: #2C4D85;
-    background: linear-gradient(to right, rgba(44, 77, 133, 0) 10%,#2c4d85 40%,#2c4d85 50%,rgba(44, 77, 133, 0) 62%);
+
   }
 
   &__box-nav-wrap {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: 850px;
+      height: 100%;
+      background-color: #2C4D85;
+      background: linear-gradient(to right, transparent 0, #2c4d85 30%,  #2c4d85 70%, transparent 100%);
+    }
+  }
+
+  &__main-nav {
+    z-index: 1;
+  }
+
+  &__user-nav {
+    z-index: 1;
   }
 }
 
@@ -139,7 +158,6 @@
       background-color: rgba(255, 255, 255, 0.4);
     }
   }
-
 
   &__link {
     display: block;

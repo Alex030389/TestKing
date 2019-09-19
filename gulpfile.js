@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     babel = require('gulp-babel'),
     sass = require('gulp-sass'),
     cleancss = require('gulp-clean-css'),
-    csso = require('gulp-csso'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
 
@@ -71,7 +70,7 @@ gulp.task('css:libs', function () {
 
 gulp.task('css', function () {
   return gulp.src('src/static/styles/main.scss')
-    .pipe(sourcemaps.init()) // ======================================== dev
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'expanded'
     }).on("error", notify.onError()))
@@ -79,8 +78,7 @@ gulp.task('css', function () {
       suffix: '.min'
     }))
     .pipe(autoprefixer(['last 15 versions']))
-    // .pipe(cleancss())
-    .pipe(sourcemaps.write()) // ======================================== dev
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/static/css/'))
     .pipe(browserSync.stream())
 });
@@ -90,8 +88,7 @@ gulp.task('css:build', function () {
     .pipe(sass().on("error", notify.onError()))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer(['last 15 versions']))
-    // .pipe(cleancss())
-    .pipe(csso())
+    .pipe(cleancss())
     .pipe(gulp.dest('dist/static/css/'))
     .pipe(browserSync.stream())
 });
@@ -116,12 +113,10 @@ gulp.task('js', function () {
       'src/static/js/main.js'
     ])
     .pipe(sourcemaps.init()) // ========================================== dev
-    // .pipe(babel({
-    //   presets: ['@babel/env']
-    // }))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(concat('main.min.js'))
-
-    // .pipe(uglify()) // ================================================ build
     .pipe(sourcemaps.write()) // ========================================= dev
     .pipe(gulp.dest('dist/static/js/'))
     .pipe(browserSync.reload({
