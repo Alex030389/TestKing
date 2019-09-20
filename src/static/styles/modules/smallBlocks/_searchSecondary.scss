@@ -1,0 +1,43 @@
+.box-search-secondary {
+  display: flex;
+  justify-content: center;
+}
+
+.search-secondary {
+  padding: 26px 20px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #3d88ca;
+  overflow: hidden;
+  background: url(../img/search-fon.png) left center no-repeat;
+  background-size:  cover;
+  display: flex;
+  align-items: center;
+  max-width: 442px;
+  width: 100%;
+
+  @media (max-width: $ssm) {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  &__select {
+    padding: 8px 7px 7px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 13px;
+    max-width: 290px;
+    width: 100%;
+    border: none;
+
+    @media (max-width: $ssm) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__btn {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+}

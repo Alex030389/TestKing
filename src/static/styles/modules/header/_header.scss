@@ -7,8 +7,6 @@
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
   z-index: 1;
   padding-top: 15px;
-
-
   flex-shrink: 0;
 
   &::after {
@@ -28,7 +26,7 @@
     display: flex;
     justify-content: space-between;
     z-index: 10;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
   &__logo {
@@ -43,9 +41,17 @@
   &__mcafee {
     flex-shrink: 0;
     margin-right: 10px;
+
+    @media (max-width: 860px) {
+      display: none;
+    }
   }
 
   &__box-nav {
+
+    @media (max-width: 860px) {
+      display: none;
+    }
 
   }
 
@@ -82,6 +88,10 @@
   position: relative;
   top: -5px;
 
+  @media (max-width: $sm) {
+    display: none;
+  }
+
   &__input {
     border: 1px solid #3870ab;
     color: #1f63b1;
@@ -104,7 +114,7 @@
 
 .main-nav {
   color: #fff;
-  font-family: $ff-title;
+  font-family: $ff-nav;
   display: flex;
 
   &__item:not(:last-child) {
@@ -125,7 +135,7 @@
 
   &__link {
     display: block;
-    padding: 13px 17px 11px;
+    padding: 10px 17px 10px;
     position: relative;
 
 
@@ -162,8 +172,8 @@
   &__link {
     display: block;
     color: #fff;
-    font-family: $ff-title;
-    padding: 13px 25px 11px;
+    font-family: $ff-nav;
+    padding: 10px 24px 10px;
     background-color: rgba(72, 85, 105, 0);
     transition: .3s;
 

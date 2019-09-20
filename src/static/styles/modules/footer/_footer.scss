@@ -3,6 +3,7 @@
   background: #3874ac;
   background: linear-gradient(to bottom,  #3874ac,#384d87);
   color: #fff;
+  overflow-x: hidden;
 
   &__top {
     margin-bottom: 10px;
@@ -15,14 +16,14 @@
     &__item:not(:last-child) {
 
       &::after {
-        background-color: #284171;
+        background-color: rgba(40, 66, 113, 0.5);
       }
     }
   }
 
   .main-nav__link {
     white-space: nowrap;
-    padding: 8px 13px;
+    padding: 8px 12px;
     font-size: 11px;
 
     &:hover {
@@ -37,7 +38,6 @@
 
   &__rights {
     font-size: 11px;
-    // background-color: rgb(175, 175, 175);
   }
 
   &__rights-wrap {

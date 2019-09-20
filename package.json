@@ -6,7 +6,8 @@
   "scripts": {
     "start": "gulp",
     "start build": "gulp build",
-    "start img": "gulp img"
+    "start img": "gulp img",
+    "font": "gulp fonts"
   },
   "author": "AlexKa",
   "license": "ISC",

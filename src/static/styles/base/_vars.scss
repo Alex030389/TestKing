@@ -1,10 +1,11 @@
 // fonts
 $ff-title: "Helvetica", sans-serif;
-$ff-main: "Arial", sans-serif;
+$ff-main: "Arial", Helvetica, sans-serif;
+$ff-nav: "Open Sans", Helvetica, sans-serif;
 
 $fsz-main: 12px;
-$fsz-h1: 28px;
-$fsz-h2: 22px;
+$fsz-h1: 26px;
+$fsz-subtitle: 16px;
 
 // colors
 $c-main: #474c58;
@@ -20,3 +21,4 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 $xsm: 400px;
+$ssm: 350px;
