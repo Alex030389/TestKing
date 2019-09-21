@@ -6,13 +6,17 @@
 
     <form action="#" class="header__search search">
       <input class="search__input" type="text" placeholder="Search">
-      <button class="search__btn">
-        <img src="static/img/btn/search.png" alt="">
-      </button>
+      <button class="search__btn btn"></button>
     </form>
 
     <div class="header__mcafee mcafee">
       <img src="static/img/icon/mcAfee.png" alt="mcAfee">
+    </div>
+    <div class="header__box-search-btn sm-show-flex">
+      <button class="js search__btn btn"></button>
+    </div>
+    <div class="header__box-hamburger w870-show-flex">
+      <button class="js header__hamburger btn"></button>
     </div>
   </div>
   <!-- /header__top -->
@@ -21,7 +25,7 @@
     <div class="wrap header__box-nav-wrap">
       <ul class="header__main-nav main-nav">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="">Home</a>
+          <a class="main-nav__link current" href="">Home</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Products</a>
@@ -53,5 +57,55 @@
       </ul>
     </div>
   </nav>
+
+  <div class="js header__wrap-m-box">
+      <div class="header__m-box">
+        <form action="#" class="header__m-search search">
+          <input class="search__input" type="text" placeholder="Search">
+          <button class="search__btn-mobile btn">search</button>
+        </form>
+      </div>
+    </div>
+
+  <div class="js header__wrap-m-box">
+    <div class="header__m-box">
+      <nav class="header__m-box-nav">
+        <ul class="header__m-nav m-nav">
+          <li class="m-nav__item">
+            <a class="m-nav__link current" href="">Home</a>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#">Products</a>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#">Mega Packs</a>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#">Request Exam</a>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#">Corporate Accounts</a>
+          </li>
+          <li class="m-nav__item">
+            <a class="m-nav__link" href="#">FAQ</a>
+          </li>
+        </ul>
+
+        <ul class="header__m-nav m-nav">
+          <li class="m-nav__item">
+            <a href="#" class="m-nav__link">My Account</a>
+          </li>
+          <li class="m-nav__item">
+            <a href="#" class="m-nav__link">Cart</a>
+          </li>
+          <li class="m-nav__item">
+            <a href="#" class="m-nav__link">Log In</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
 
 </header>

@@ -1,0 +1,15 @@
+.w870-show-flex {
+  display: none;
+
+  @media (max-width: 870px) {
+    display: flex;
+  }
+}
+
+.sm-show-flex {
+  display: none;
+
+  @media (max-width: $sm) {
+    display: flex;
+  }
+}
