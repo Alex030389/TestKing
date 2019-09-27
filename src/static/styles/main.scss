@@ -4,12 +4,18 @@
 @import "base/utils";
 @import "base/common";
 @import "modules/buttons/btn";
+
+// small-blocks
 @import "modules/smallBlocks/searchSecondary";
+@import "modules/smallBlocks/breadCrumbs";
+
 @import "modules/aside/aside";
 
 @import "modules/header/header";
 
+// page
 @import "pages/home";
+@import "pages/vendor";
 
 @import "modules/footer/footer";
 @import "base/size-screen-show-hide";

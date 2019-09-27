@@ -1,0 +1,21 @@
+.vendor {
+
+  &__box-img-title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &__title {
+
+  }
+
+  &__text {
+    line-height: 16px;
+  }
+}
