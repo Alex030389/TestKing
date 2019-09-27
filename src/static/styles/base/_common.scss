@@ -29,7 +29,7 @@ body {
   background: linear-gradient(to right,  #ffffff 0%,#F0F2FC 30%,#F0F2FC 30%,#F0F2FC 70%,#ffffff 100%);
   font-size: $fsz-main;
   font-family: $ff-main;
-  line-height: 1.33;
+  // line-height: 1.33;
   color: $c-main;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -165,6 +165,7 @@ select::-ms-expand {
   font-family: $ff-title;
   font-size: 26px;
   margin-bottom: 5px;
+  line-height: 1.23;
 }
 
 .subtitle {
@@ -176,6 +177,7 @@ select::-ms-expand {
 
 .subtitle-sec {
   color: $c-title-dark;
+  margin-bottom: 10px;
 }
 
 .h2 {
@@ -189,12 +191,13 @@ select::-ms-expand {
 }
 
 .list {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   &__item {
     font-size: 13px;
     padding: 3px 0 3px 30px;
-    background: url(../img/icon/item.png) left top no-repeat;
+    background: url(../img/icon/item.png) 1px top no-repeat;
+    line-height: 16px;
   }
 }
 
@@ -202,7 +205,6 @@ select::-ms-expand {
   text-decoration: underline;
   color: $c-link-dark;
 }
-
 
 .main {
   flex-grow: 1;
@@ -240,7 +242,7 @@ select::-ms-expand {
 
 .section {
   margin-bottom: 8px;
-  padding: 12px 15px;
+  padding: 12px 13px 15px 13px;
 
   &._border {
     border: 1px solid #c9c9c9;
@@ -258,6 +260,10 @@ select::-ms-expand {
     @media (max-width: $md) {
       margin-bottom: 8px;
     }
+  }
+
+  &._bottom_dark {
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.4);
   }
 }
 

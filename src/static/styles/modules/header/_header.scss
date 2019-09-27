@@ -3,7 +3,7 @@
   position: relative;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3874ac+0,384d87+100 */
   background: #3874ac;
-  background: linear-gradient(to bottom,  #3874ac,#384d87);
+  background: linear-gradient(to bottom, #3874ac, #384d87);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
   z-index: 1;
   padding-top: 15px;
@@ -44,11 +44,13 @@
   }
 
   &__search {
-
+    position: relative;
+    left: -60px;
 
     @media (max-width: 870px) {
       margin-right: 15px;
       margin-left: auto;
+      left: 0;
     }
 
     @media (max-width: $sm) {
@@ -129,7 +131,7 @@
       width: 900px;
       height: 100%;
       background-color: #2C4D85;
-      background: linear-gradient(to right, transparent 0, #2c4d85 30%,  #2c4d85 70%, transparent 100%);
+      background: linear-gradient(to right, transparent 0, #2c4d85 30%, #2c4d85 70%, transparent 100%);
     }
   }
 
@@ -142,20 +144,24 @@
   }
 
   &__wrap-m-box {
-    position: absolute;
+    position: fixed;
     display: none;
-    top: 100%;
-    background: linear-gradient(to bottom, #384d87, #3874ac,);
+    top: 79px;
+    bottom: 0;
+    background: linear-gradient(to bottom, #384d87, #3874ac, );
     width: 100%;
-    height: calc(100vh - 80px);
     padding: 30px 20px;
+    overflow-y: auto;
+
+    @media (max-width: $sm) {
+      top: 64px;
+    }
   }
 
   &__m-box {
     display: flex;
     justify-content: center;
   }
-
 
 }
 
@@ -171,8 +177,8 @@
     border-radius: 5px;
     padding: 6px 5px 4px;
     background-color: #AFC6DE;
-    box-shadow: inset 0px 1px 4px 1px rgba(0,0,0,0.3);
-    width: 184px;
+    box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.3);
+    width: 194px;
     margin-right: 5px;
   }
 
@@ -219,17 +225,16 @@
       top: 50%;
       left: 100%;
       width: 2px;
-      height: 54%;
+      height: 58%;
       transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.45);
     }
   }
 
   &__link {
     display: block;
-    padding: 10px 17px 10px;
+    padding: 11px 17px 11px;
     position: relative;
-
 
     &:hover {
       transition: .3s;
@@ -239,6 +244,92 @@
 
   .current {
     background-color: #284171;
+  }
+
+  &__wrap-ddmenu {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    z-index: 100;
+    display: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+      height: 10px;
+    }
+  }
+
+  &__ddmenu {}
+}
+
+.ddmenu {
+  background-color: #385a93;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px 30px 10px;
+  color: #fff;
+  display: flex;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 78px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: #385a93 transparent;
+  }
+
+  &__col {
+    width: calc(100% / 4);
+    padding: 0 10px;
+  }
+
+  &__box {
+
+    &:not(:first-child) {
+      padding-top: 26px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__title-link {
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    padding-left: 15px;
+  }
+
+  &__item {
+    margin-bottom: 6px;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__view-all {
+    display: block;
+    padding-top: 7px;
+    color: #fff;
+    text-align: right;
+    text-decoration: underline;
   }
 }
 
@@ -269,13 +360,24 @@
     display: block;
     color: #fff;
     font-family: $ff-nav;
-    padding: 10px 24px 10px;
+    padding: 11px 20px 11px;
     background-color: rgba(72, 85, 105, 0);
     transition: .3s;
 
     &:hover {
       background-color: #485569;
     }
+
+    &._cart {
+      padding-left: 44px;
+      position: relative;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 11px;
+    left: 20px;
   }
 }
 
@@ -283,7 +385,7 @@
 .m-nav {
 
   &__item {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   &__link {
@@ -300,6 +402,9 @@
       height: 8px;
       border-radius: 50%;
       background-color: orange;
+      background: linear-gradient(top, #fec11e 0%, #ee8300 100%);
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 1px #ffe7a5;
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
     }
   }
 
