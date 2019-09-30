@@ -8,16 +8,21 @@
 // small-blocks
 @import "modules/smallBlocks/searchSecondary";
 @import "modules/smallBlocks/breadCrumbs";
+@import "modules/smallBlocks/boxGuarantCart";
+
+@import "modules/header/header";
 
 @import "modules/aside/aside";
 
-@import "modules/header/header";
 
 // page
 @import "pages/home";
 @import "pages/vendor";
+@import "pages/exam1";
+
 
 @import "modules/footer/footer";
+
 @import "base/size-screen-show-hide";
 
 /* button нельзя использовать как флекс контейнер на ios, не работает */

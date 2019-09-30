@@ -68,3 +68,18 @@ $('.main-nav__wrap-ddmenu').mouseleave(function() {
 function closeDDmenu() {
   $('.main-nav__wrap-ddmenu').slideUp(200);
 }
+
+
+// ======================================================= tab
+$('.tab__btn').on('click', function() {
+  let id = $('.tab__btn').index(this);
+
+  $('.tab__btn').removeClass('active');
+  $(this).addClass('active');
+
+  $('.tab-content__item').hide();
+  $('.tab-content__item').eq(id).fadeIn();
+})
+
+
+// ========================================================
