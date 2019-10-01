@@ -82,4 +82,100 @@ $('.tab__btn').on('click', function() {
 })
 
 
-// ========================================================
+// ======================================================== add cart
+$('.exam-add-cart__btn').on('click', function() {
+  $('.exam-add-cart__wrap-response').fadeIn();
+})
+
+
+// ========================================================== slick
+$('.slider__arrow._prev').on('click', function() {
+  $('.slick-prev').click();
+})
+
+$('.slider__arrow._next').on('click', function() {
+  $('.slick-next').click();
+})
+
+$('.slider__list').slick({
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true,
+  focusOnSelect: true,
+  dots: true,
+  appendDots: $('.slider__dots'),
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        variableWidth: false,
+      }
+    }
+  ]
+});
+
+// slider-v2
+
+$('.slider-v2__list').slick({
+  slidesToShow: 4,
+  infinite: false,
+});
+
+$('.slider-v2__btn.__prev').on('click', function() {
+  $('.slick-prev').click();
+})
+
+$('.slider-v2__btn.__next').on('click', function() {
+  $('.slick-next').click();
+})
+
+
+/*REMOVE or comment below code to see behavior of infinite false setting below code handles removing of arrows*/
+$('.slider-v2__list').on('afterChange', function(){
+  console.log($('#slider').slick('slickCurrentSlide'));
+
+//   var currentSlide = $('#slider').slick('slickCurrentSlide');
+// if(currentSlide==0)
+// {
+//    $('.slick-prev').hide();
+//    $('.slick-next').show();
+// }
+// else if(currentSlide==5)
+// {
+// $('.slick-next').hide();
+// $('.slick-prev').show();
+// }
+
+// if(currentSlide>0 && currentSlide<5)
+// {
+//    $('.slick-prev').show();
+//    $('.slick-next').show();
+// }
+
+// });
+
+// $(document).ready(function(){
+// var currentSlide = $('#slider').slick('slickCurrentSlide');
+// if(currentSlide==0)
+// {
+//    $('.slick-prev').hide();
+// }
+// else if(currentSlide==5)
+// {
+// $('.slick-next').hide();
+// }
+
+});
+
+
+// ================================================================= tab-exam2__more
+$('.tab-exam2__more').on('click', function() {
+
+  if($(this).text() == 'More...') {
+    $('.tab-exam2__desc-p').fadeIn();
+    $(this).text('Close');
+  } else {
+    $('.tab-exam2__desc-p').hide();
+    $(this).text('More...');
+  }
+})

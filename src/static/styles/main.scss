@@ -1,13 +1,17 @@
 @import "base/fonts";
 @import "base/vars";
-@import "base/normalize";
 @import "base/utils";
 @import "base/common";
 @import "modules/buttons/btn";
 
+@import "modules/slider/slider"; // перенести в small-blocks
+@import "modules/slider/sliderV2";
+
 // small-blocks
 @import "modules/smallBlocks/searchSecondary";
 @import "modules/smallBlocks/breadCrumbs";
+@import "modules/smallBlocks/tab";
+@import "modules/smallBlocks/examData";
 @import "modules/smallBlocks/boxGuarantCart";
 
 @import "modules/header/header";
@@ -19,6 +23,7 @@
 @import "pages/home";
 @import "pages/vendor";
 @import "pages/exam1";
+@import "pages/exam2";
 
 
 @import "modules/footer/footer";

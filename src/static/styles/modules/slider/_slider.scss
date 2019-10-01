@@ -1,0 +1,114 @@
+.slider {
+  margin: 0 -15px -15px -15px;
+  padding-top: 20px;
+
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    max-width: 564px;
+    opacity: .3;
+    transition: .6s;
+    transform: scale(.82);
+
+    &.slick-center {
+      opacity: 1;
+      transform: scale(1);
+
+      .slider__title {
+        opacity: 1;
+
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: 1.5s;
+  }
+
+  &__control {
+    height: 60px;
+    background-color: #f5f8ff;
+    display: flex;
+
+    @media (max-width: $sm) {
+      height: 40px;
+    }
+  }
+
+  &__arrow {
+    background-color: #ecf0f9;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: calc(100% / 3);
+
+    &._prev {
+      background-image: url(../img/icon/carleft.png);
+    }
+
+    &._next {
+      background-image: url(../img/icon/caright.png);
+    }
+
+    @media (max-width: $md) {
+      width: 25%;
+    }
+
+    @media (max-width: $sm) {
+      width: 15%;
+      background-size: 15%;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    padding: 10px;
+
+    .slick-dots {
+      display: flex;
+
+      li {
+        font-size: 0;
+        color: transparent;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #dce5f3;
+        transition: .3s;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        &.slick-active {
+          background-color: #95A9BF;
+        }
+      }
+    }
+
+    @media (max-width: $md) {
+      width: 50%;
+    }
+
+    @media (max-width: $sm) {
+      width: 70%;
+    }
+  }
+}
+
+.slick-arrow {
+  display: none !important;
+}

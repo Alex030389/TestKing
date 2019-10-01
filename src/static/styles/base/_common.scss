@@ -25,11 +25,9 @@ body {
   flex-direction: column;
   background-color: #fff;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f0f2fc+30,f0f2fc+30,f0f2fc+70,ffffff+100 */
-  // background: linear-gradient(to right,  #ffffff 0%,#f0f2fc 30%,#f0f2fc 30%,#f0f2fc 70%,#ffffff 100%);
   background: linear-gradient(to right, #ffffff 0%, #F0F2FC 30%, #F0F2FC 30%, #F0F2FC 70%, #ffffff 100%);
   font-size: $fsz-main;
   font-family: $ff-main;
-  // line-height: 1.33;
   color: $c-main;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -177,6 +175,7 @@ select::-ms-expand {
   color: $c-title-light;
   margin-bottom: 10px;
   font-size: $fsz-subtitle;
+  font-weight: 700;
 }
 
 .subtitle-sec {
@@ -192,6 +191,12 @@ select::-ms-expand {
   &._m_sm {
     margin-bottom: 5px;
   }
+}
+
+.h3 {
+  font-size: 20px;
+  font-family: $ff-title;
+  color: $c-title-dark;
 }
 
 .list {
@@ -247,6 +252,10 @@ select::-ms-expand {
   }
 }
 
+section {
+  display: block;
+}
+
 .section {
   margin-bottom: 8px;
   padding: 12px 13px 15px 13px;
@@ -278,6 +287,12 @@ select::-ms-expand {
   }
 }
 
+.border-grey {
+  border: 1px solid #c9c9c9;
+  border-radius: 7px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
 .section-v2 {
   padding-left: 6px;
 
@@ -287,7 +302,6 @@ select::-ms-expand {
 }
 
 .section-v3 {
-  padding: 0 6px;
 }
 
 

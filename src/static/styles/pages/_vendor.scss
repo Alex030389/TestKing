@@ -23,67 +23,9 @@
   }
 }
 
-// ======================================================= tab
-.tab-box {
-}
 
-.tab {
-  display: flex;
-  z-index: 10;
-
-  &__btn {
-    color: $c-title-dark;
-    padding: 12px 15px 10px;
-    background-color: #F2F3F4;
-    border-left: 1px solid #F2F3F4;
-    border-top: 1px solid #F2F3F4;
-    border-right: 1px solid #F2F3F4;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-
-    &.active {
-      background-color: #fff;
-      border-color: #c9c9c9;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #fff;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-right: 2px;
-    }
-  }
-}
-
-.tab-content {
-  border-top-left-radius: 0 !important;
-  padding-top: 0;
-  overflow: hidden;
-  color: $c-link-dark;
-
-  &__item {
-    display: none;
-
-    &.active {
-      display: block;
-    }
-  }
-
-  @media (max-width: $sm) {
-    border-top-right-radius: 0 !important;
-  }
-}
-
+// =============================================== level
 .level-1 {
-
 
   &__item {
     & > p {

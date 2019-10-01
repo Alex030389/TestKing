@@ -1,0 +1,32 @@
+.slider-v2 {
+  position: relative;
+
+  &__list {
+    padding: 0 19px;
+  }
+
+  &__item {
+    margin: 0 1px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  &__btn {
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 17px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    &.__prev {
+      background-image: url(../img/icon/prev.png);
+      left: 0;
+    }
+
+    &.__next {
+      background-image: url(../img/icon/next.png);
+      right: 0;
+    }
+  }
+}
