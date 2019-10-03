@@ -1,0 +1,32 @@
+.certifications {
+
+  &__item {
+    display: flex;
+    padding: 10px;
+
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+      border-bottom: 1px solid $c-hr-lite-grey;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    width: 136px;
+    height: 128px;
+    margin-right: 20px;
+  }
+
+  &__level {
+
+  }
+}
+
+
+.level2-1 {
+
+  &__item {
+
+  }
+}
