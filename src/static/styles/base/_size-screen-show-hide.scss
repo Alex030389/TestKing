@@ -7,6 +7,26 @@
   }
 }
 
+// ================================================ md
+.md-hide {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.md-show {
+  display: none;
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+.md-show-flex {
+  display: none;
+  @media (max-width: $md) {
+    display: flex;
+  }
+}
 
 // ================================================ sm
 .sm-hide {

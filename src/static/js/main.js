@@ -18,6 +18,25 @@ $(window).resize(function () {
 
 })
 
+// =============================================== smooth scroll
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+
+// =============================================== select link
+const searchCertificSelect = document.querySelector('.search-certifications__select select');
+if(searchCertificSelect) {
+  searchCertificSelect.addEventListener('change', function() {
+    if(this.value) {
+      window.location.href = this.value;
+    }
+  })
+}
+
 // =============================================== header nav
 $('.js.header__hamburger').click(function () {
 

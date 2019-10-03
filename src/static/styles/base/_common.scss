@@ -168,6 +168,10 @@ select::-ms-expand {
   font-size: 26px;
   margin-bottom: 5px;
   line-height: 1.23;
+
+  &._v2 {
+    margin-bottom: 8px;
+  }
 }
 
 .subtitle {
@@ -176,6 +180,10 @@ select::-ms-expand {
   margin-bottom: 10px;
   font-size: $fsz-subtitle;
   font-weight: 700;
+
+  &._v2 {
+    font-size: 18px;
+  }
 }
 
 .subtitle-sec {
@@ -244,6 +252,7 @@ select::-ms-expand {
   }
 
   .content {
+    width: 100%;
     margin-right: 10px;
     flex-grow: 1;
 
@@ -269,6 +278,10 @@ section {
 
   &._gradient {
     background: linear-gradient(to bottom, #dde5f9, #f6f9fe 30%);
+  }
+
+  &._orange {
+    background-color: $c-orange;
   }
 
   &._mb_0 {
