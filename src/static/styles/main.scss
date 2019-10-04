@@ -4,9 +4,6 @@
 @import "base/common";
 @import "modules/buttons/btn";
 
-@import "modules/slider/slider"; // перенести в small-blocks
-@import "modules/slider/sliderV2";
-
 // small-blocks
 @import "modules/smallBlocks/searchSecondary";
 @import "modules/smallBlocks/breadCrumbs";
@@ -14,10 +11,13 @@
 @import "modules/smallBlocks/examData";
 @import "modules/smallBlocks/boxGuarantCart";
 
+@import "modules/slider/slider"; // перенести в small-blocks
+@import "modules/slider/sliderV2";
+@import "modules/logo-list/logo-list";
+
 @import "modules/header/header";
 
 @import "modules/aside/aside";
-
 
 // page
 @import "pages/home";
@@ -26,6 +26,7 @@
 @import "pages/exam2";
 @import "pages/certifications";
 @import "pages/allproducts";
+@import "pages/megaPacks";
 
 
 @import "modules/footer/footer";

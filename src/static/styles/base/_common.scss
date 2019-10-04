@@ -183,6 +183,7 @@ select::-ms-expand {
 
   &._v2 {
     font-size: 18px;
+    line-height: 1.2;
   }
 }
 
@@ -269,6 +270,7 @@ section {
 .section {
   margin-bottom: 8px;
   padding: 12px 13px 15px 13px;
+  overflow: hidden;
 
   &._border {
     border: 1px solid #c9c9c9;
@@ -294,6 +296,10 @@ section {
 
   &._pt_0 {
     padding-top: 0;
+  }
+
+  &._p_0 {
+    padding: 0;
   }
 
   &._bottom_dark {
