@@ -3,7 +3,9 @@
   background: #3874ac;
   background: linear-gradient(to bottom,  #3874ac,#384d87);
   color: #fff;
-  overflow-x: hidden;
+  flex-shrink: 0;
+  // overflow-x: hidden;
+
 
   &__top {
     margin-bottom: 10px;
