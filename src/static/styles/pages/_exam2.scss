@@ -4,6 +4,7 @@
 
   &__first {
     width: 309px;
+    flex-shrink: 0;
 
     .h1 {
       padding-left: 9px;
@@ -17,7 +18,7 @@
 
   &__second {
     flex-grow: 1;
-    width: 100px;
+    width: 100%;
 
     @media (max-width: $md) {
       width: 100%;
@@ -70,7 +71,9 @@
 
 .tab-exam2 {
 
-  &__list {}
+  &__list {
+    max-width: 100%;
+  }
 
   &__item {
     display: flex;
@@ -91,7 +94,9 @@
     }
   }
 
-  &__text {}
+  &__text {
+    max-width: 100%;
+  }
 
   &__h3.h3 {
     font-size: 16px;
@@ -107,6 +112,7 @@
 
   &__p {
     margin-bottom: 0;
+    max-width: 100%;
   }
 
   &__desc {
@@ -222,6 +228,16 @@
       text-decoration: underline;
     }
   }
+}
 
+// simplelightbox
+.sl-wrapper .sl-close,
+.sl-wrapper .sl-counter,
+.sl-wrapper .sl-navigation button.sl-prev,
+.sl-wrapper .sl-navigation button.sl-next {
+  color: rgb(255, 255, 255);
+}
 
+.sl-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
 }

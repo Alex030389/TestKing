@@ -1,28 +1,5 @@
 'use strict';
 
-// ============================================================ footer
-(function () {
-  var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-  var stickFooter = function () {
-    var FOOTER = document.querySelector('footer');
-    var MAIN = document.querySelector('main');
-    var BODY = document.querySelector('body');
-    var footerHeight = FOOTER.offsetHeight;
-    BODY.style.position = 'relative';
-    MAIN.style.marginBottom = footerHeight + 'px';
-    FOOTER.style.position = 'absolute';
-    FOOTER.style.bottom = '0';
-    FOOTER.style.left = '0';
-    FOOTER.style.width = '100%';
-  };
-
-  if (isIE11) {
-    stickFooter();
-    window.addEventListener('resize', stickFooter);
-  }
-})();
-
 let body = document.querySelector('body');
 
 $(window).resize(function () {
@@ -121,6 +98,8 @@ $('.tab__btn').on('click', function () {
 
   $('.tab-content__item').hide();
   $('.tab-content__item').eq(id).fadeIn();
+  // $('.tab-content__item').removeClass('active');
+  // $('.tab-content__item').eq(id).addClass('active');
 })
 
 // ======================================================== changes the price
@@ -224,3 +203,26 @@ $('.tab-exam2__more').on('click', function () {
 if(document.querySelector('.slider-v2__item')) {
   $('.slider-v2__item').simpleLightbox();
 }
+
+// ============================================================ footer
+// (function () {
+//   var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+
+//   var stickFooter = function () {
+//     var FOOTER = document.querySelector('footer');
+//     var MAIN = document.querySelector('main');
+//     var BODY = document.querySelector('body');
+//     var footerHeight = FOOTER.offsetHeight;
+//     BODY.style.position = 'relative';
+//     MAIN.style.marginBottom = footerHeight + 'px';
+//     FOOTER.style.position = 'absolute';
+//     FOOTER.style.bottom = '0';
+//     FOOTER.style.left = '0';
+//     FOOTER.style.width = '100%';
+//   };
+
+//   if (isIE11) {
+//     stickFooter();
+//     window.addEventListener('resize', stickFooter);
+//   }
+// })();

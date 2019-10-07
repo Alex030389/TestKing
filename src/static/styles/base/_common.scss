@@ -4,9 +4,6 @@
   box-sizing: inherit;
 }
 
-html, body {
-}
-
 html {
   box-sizing: border-box;
   height: 100%;
@@ -17,6 +14,7 @@ body {
   flex-direction: column;
   background-color: #fff;
   min-height: 100%;
+  overflow-x: hidden;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f0f2fc+30,f0f2fc+30,f0f2fc+70,ffffff+100 */
   background: linear-gradient(to right, #ffffff 0%, #F0F2FC 30%, #F0F2FC 30%, #F0F2FC 70%, #ffffff 100%);
   font-size: $fsz-main;
@@ -201,17 +199,6 @@ select::-ms-expand {
   color: $c-title-dark;
 }
 
-.list {
-  margin-bottom: 11px;
-
-  &__item {
-    font-size: 13px;
-    padding: 3px 0 3px 30px;
-    background: url(../img/icon/item.png) 1px top no-repeat;
-    line-height: 16px;
-  }
-}
-
 .link {
   text-decoration: underline;
   color: $c-link-dark;
@@ -278,6 +265,10 @@ section {
 
   &._orange {
     background-color: $c-orange;
+  }
+
+  &._lite-grey {
+    background-color: #fbfbfb;
   }
 
   &._mb_0 {

@@ -11,13 +11,12 @@
 @import "modules/smallBlocks/examData";
 @import "modules/smallBlocks/boxGuarantCart";
 
-@import "modules/slider/slider"; // перенести в small-blocks
+@import "modules/slider/slider";
 @import "modules/slider/sliderV2";
 @import "modules/logo-list/logo-list";
+@import "modules/list/list";
 
 @import "modules/header/header";
-
-@import "modules/aside/aside";
 
 // page
 @import "pages/home";
@@ -27,7 +26,9 @@
 @import "pages/certifications";
 @import "pages/allproducts";
 @import "pages/megaPacks";
+@import "pages/cart";
 
+@import "modules/aside/aside";
 
 @import "modules/footer/footer";
 
