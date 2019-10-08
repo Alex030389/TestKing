@@ -1,0 +1,17 @@
+.list-ol {
+  color: $c-title-light;
+  font-weight: 700;
+  margin-left: 29px;
+  font-size: 14px;
+
+  &__item {
+    list-style-type: decimal;
+    margin-bottom: 8px;
+
+    span {
+      color: #474c58;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}
