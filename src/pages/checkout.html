@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+//= modules/head.html
+
+<body>
+
+  //= modules/header/header.html
+
+  <main class="main">
+    <div class="wrap main-wrap">
+
+      <!-- //= modules/smallBlocks/breadCrumbs.html -->
+
+      <div class="inner">
+
+        <!-- =========================================================== cart -->
+        <div class="content cart">
+          <div class="padding-0-9">
+            <h1 class="h1 _v2">Fast & Secure, One Step Checkout</h1>
+            <h2 class="subtitle _v2">Your Products will be made Available Immediately After Purchase</h2>
+          </div>
+          <section class="section _border _lite-grey">
+            <h2 class="cart__h2 h2">Review Your Order</h2>
+            <p class="cart__subtittle">The following items have been added to your shopping cart.</p>
+            <div class="cart__wrap-table">
+              <table class="cart__table">
+                <tr>
+                  <th>#</th>
+                  <th>Item Description</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <a class="link" href="#">Cisco 400-101 Questions & Answers PDF Version</a>
+                  </td>
+                  <td>1</td>
+                  <td>$59.99</td>
+                  <td><a class="cart__btn-td btn-grey" href="#">Remove</a> </td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <a class="link" href="#">IBM C1000-012 Questions & Answers</a>
+                    <div class="cart__inst-disc">$12.50 Instant Discount</div>
+                  </td>
+                  <td>
+                    <select class="cart__td-select">
+                      <option value="0">1-2 Computers</option>
+                      <option value="1">3 Computers</option>
+                      <option value="2">4 Computers</option>
+                      <option value="3">5 Computers</option>
+                    </select>
+                  </td>
+                  <td>$124.99</td>
+                  <td><a class="cart__btn-td btn-grey" href="#">Remove</a> </td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <a class="link" href="">Microsoft MCSA: SQL Server 2012 Bundle</a>
+                    <ul class="cart__desc-list">
+                      <li class="cart__desc-item">- 70-461 Questions & Answers</li>
+                      <li class="cart__desc-item">- 70-461 Video Course</li>
+                      <li class="cart__desc-item">- 70-462 Questions & Answers</li>
+                      <li class="cart__desc-item">- 70-462 Video Course</li>
+                      <li class="cart__desc-item">- 70-463 Questions & Answers</li>
+                      <li class="cart__desc-item">- 70-463 Video Course</li>
+                    </ul>
+                  </td>
+                  <td>1</td>
+                  <td>$276.90</td>
+                  <td><a class="cart__btn-td btn-grey" href="#">Remove</a> </td>
+                </tr>
+              </table>
+            </div>
+            <div class="cart__promotion-code">
+              <form class="cart__promotion-form section _border" action="#">
+                <label class="cart__promotion-label">
+                  <span>Promotion Code:</span>
+                  <input class="cart__promotion-input" type="text">
+                </label>
+                <button class="cart__promotion-btn btn-blue">Apply</button>
+              </form>
+            </div>
+            <div class="cart__total">Total: $751.84</div>
+            <div class="cart__box-info">
+              <p>* In order to avoid duplicate orders only 1 copy of each product can be purchased. If you are
+                interested in multiple copies please contact <a class="link"
+                  href="mailto:sales@testking.com">sales@testking.com</a>.</p>
+            </div>
+
+          </section>
+
+          <!-- ================================================================ FORM -->
+          <form action="#">
+
+            <!-- ================================================================ billing address -->
+            <section class="section _border _lite-grey">
+              <h2 class="cart__h2 h2">Billing Address</h2>
+              <ul class="input">
+                <li class="input__item">
+                  <label for="first-name">First Name on Card:</label>
+                  <input id="first-name" name="first-name" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="last-name">Last Name on Card:</label>
+                  <input id="last-name" name="last-name" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="address">Address:</label>
+                  <input id="address" name="address" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="city">City:</label>
+                  <input id="city" name="city" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="state">State/Province:</label>
+                  <input id="state" name="state" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="country">Country:</label>
+                  <select name="country" id="country">
+                    <option value="country">Please choose your country...</option>
+                  </select>
+                </li>
+                <li class="input__item">
+                  <label for="zip">Zip/Postal:</label>
+                  <input id="zip" name="zip" type="text">
+                </li>
+                <li class="input__item">
+                  <label for="phone">Phone:</label>
+                  <input id="phone" name="phone" type="text">
+                </li>
+              </ul>
+
+            </section>
+
+            <!-- ================================================================ billing details -->
+            <section class="section _border _lite-grey details">
+              <h2 class="cart__h2 h2">Billing Details</h2>
+              <div class="details__box">
+                <div class="details__box-1">
+                  <ul class="details__input input">
+                    <li class="input__item">
+                      <label for="card-number">Card Number:</label>
+                      <input id="card-number" name="card-number" type="text">
+                    </li>
+                    <li class="input__item">
+                      <label for="cvv">Security Code (CVV):</label>
+                      <div class="details__box-input-cvv">
+                        <input class="details__input-cvv" id="cvv" name="cvv" type="text">
+                        <div class="what-is-this">
+                          <img src="static/img/cards/card.png" alt="card">
+                          <button type="button">What is this?</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="input__item">
+                      <label for="card-type">Card Type:</label>
+                      <select name="card-type" id="card-type">
+                        <option value selected>Select Card Type</option>
+                        <option value="VISA">Visa</option>
+                        <option value="MC">MasterCard</option>
+                        <option value="AMEX">American Express</option>
+                        <option value="SWITCH">Maestro</option>
+                        <option value="SOLO">Solo</option>
+                        <option value="VISADEBIT">Visa Debit</option>
+                        <option value="UKE">Electron</option>
+                      </select>
+                    </li>
+                    <li class="input__item">
+                      <label for="month">Expiration date:</label>
+                      <div class="details__box-select">
+                        <select class="details__select" name="month" id="month">
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                        </select>
+                        <select class="details__select" name="year" id="year">
+                          <option value="2019">19</option>
+                          <option value="2018">18</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="details__wrap-btn">
+                    <button class="details__btn btn">PAY NOW</button>
+                  </div>
+                </div>
+                <div class="details__box-2">
+                  <div class="details__img-cards">
+                    <img src="static/img/cards/cards4-1.png" alt="cards">
+                  </div>
+                  <p class="details__p">Your purchase with Testking is safe and fast. Your products will be available for immediate download after your payment has been received.</p>
+                  <p class="details__p">Testking website is protected by 256-bit SSL from McAfee, the leader in online security.</p>
+                  <div class="details__secure">
+                    <img src="static/img/other/20190611-2.png" alt="secure">
+                  </div>
+                </div>
+              </div>
+              <div class="details__info">
+                <p>* All fields are mandatory</p>
+                <p>** Please wait for up-to 1 minute after clicking Pay Now</p>
+                <p>Note: Testking.com is owned by Certification Trendz Ltd. The charges on your Credit/Debit Card
+                  Statement will appear as paid to Certification Trendz Ltd.</p>
+              </div>
+              <!-- /details__box -->
+            </section>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+        <!-- /content -->
+
+        //= modules/aside/aside2-checkout.html
+
+      </div>
+      <!-- /inner -->
+    </div>
+    <!-- /wrap -->
+  </main>
+
+  //= modules/footer/footer.html
+  //= modules/scripts.html
+
+</body>
+
+</html>

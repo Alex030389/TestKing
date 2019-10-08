@@ -43,7 +43,11 @@
       }
 
       &:nth-child(2) {
-        min-width: 200px;
+        min-width: 160px;
+
+        @media (max-width: $md) {
+          min-width: 200px;
+        }
       }
 
       &:nth-child(3) {
@@ -102,6 +106,7 @@
 
     @media (max-width: $xsm) {
       margin: 0 auto;
+      align-items: flex-end;
     }
   }
 
@@ -137,12 +142,12 @@
 
   &__box-info {
     line-height: 1.4;
-    border-bottom: 1px solid $c-hr-lite-grey;
     padding-bottom: 6px;
-    margin-bottom: 18px;
   }
 
   &__box-go-to {
+    border-top: 1px solid $c-hr-lite-grey;
+    padding-top: 18px;
 
     @media (max-width: $xsm) {
       margin-bottom: 10px;
