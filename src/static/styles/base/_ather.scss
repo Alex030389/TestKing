@@ -1,0 +1,27 @@
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.blue {
+  color: $c-link-dark;
+}
+
+.red {
+  color: red;
+}
+
+.link {
+  text-decoration: underline;
+  color: $c-link-dark;
+}
+
+.fl-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}

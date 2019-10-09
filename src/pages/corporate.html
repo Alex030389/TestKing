@@ -14,29 +14,120 @@
 
       <div class="inner">
 
-      <div class="content corporate">
+        <div class="content corporate">
 
-        <section class="section _border _gradient">
-          <h1 class="h1">Testking License Program</h1>
-          <div class="corporate__license-box">
-            <div class="corporate__img">
-              <img src="static/img/other/corporate-img.png" alt="corporate">
+          <!-- ================================================================= license program -->
+          <section class="section _border _gradient">
+            <h1 class="h1">Testking License Program</h1>
+            <div class="corporate__license-box">
+              <div class="corporate__img">
+                <img src="static/img/other/corporate-img.png" alt="corporate">
+              </div>
+              <div class="corporate__desc">
+                <p>Testking License Program was designed to help you earn. It is a perfect option for various training
+                  organizations, including training centers, colleges or universities, companies and other organizations
+                  who are motivated to provide quality training to their clients or employees along with improving their
+                  bottom line. Testking provides them with up-to-date learning solutions and efficient training they can
+                  pass on to their staff.</p>
+                <p>Testking partnership program is a flexible way of mutually beneficial cooperation with clear personal
+                  profit strategy or just a smart recipe for saving corporate resources with proven solutions.</p>
+                <p>Certification training materials is not the Testking product your business can benefit from. Testking
+                  provides assistance in developing and maintaining corporate educational and exam preparation plans
+                  that can help you bring your IT staff to new level of professionalism and self-confidence - qualities
+                  to drive your business forward.</p>
+              </div>
             </div>
-            <div class="corporate__desc">
-              <p>Testking License Program was designed to help you earn. It is a perfect option for various training organizations, including training centers, colleges or universities, companies and other organizations who are motivated to provide quality training to their clients or employees along with improving their bottom line. Testking provides them with up-to-date learning solutions and efficient training they can pass on to their staff.</p>
-              <p>Testking partnership program is a flexible way of mutually beneficial cooperation with clear personal profit strategy or just a smart recipe for saving corporate resources with proven solutions.</p>
-              <p>Certification training materials is not the Testking product your business can benefit from. Testking provides assistance in developing and maintaining corporate educational and exam preparation plans that can help you bring your IT staff to new level of professionalism and self-confidence - qualities to drive your business forward.</p>
-            </div>
-          </div>
-        </section>
-        <section class="section _border">
+          </section>
 
-        </section>
+          <!-- =============================================================== form -->
+          <section class="section _border corp-form">
+            <form action="#">
+              <h2 class="corp-form__title">Please fill out your information below and Testking License Program Manager
+                will get back to you with best solution according to your requirements:</h2>
+              <ul class="corp-form__list">
+                <li class="corp-form__item form__item">
+                  <label for="first-name">Contact Name:</label>
+                  <div class="wrap-input _mandatory">
+                    <input id="first-name" name="first-name" type="text">
+                  </div>
+                </li>
+                <li class="corp-form__item form__item">
+                  <label for="company">Company:</label>
+                  <div class="wrap-input">
+                    <input id="company" name="company" type="text">
+                  </div>
+                </li>
+                <li class="corp-form__item form__item">
+                  <label for="email">Email Address:</label>
+                  <div class="wrap-input _mandatory">
+                    <input id="email" name="email" type="email">
+                  </div>
+                </li>
+                <li class="corp-form__item form__item">
+                  <label for="url">Web Site URL:</label>
+                  <div class="wrap-input">
+                    <input id="url" name="url" type="text">
+                  </div>
+                </li>
+                <li class="corp-form__item form__item">
+                  <label for="phone">Valid Phone Number:</label>
+                  <div class="wrap-input _mandatory">
+                    <input id="phone" name="phone" type="text">
+                  </div>
+                </li>
+                <li class="corp-form__item form__item">
+                  <label for="country">Country: </label>
+                  <div class="wrap-input _mandatory">
+                    <select name="country" id="country">
+                      <option value selected>Select Country</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
 
-      </div>
-      <!-- /content -->
+              <h2 class="corp-form__title">Tell us about your requirements:</h2>
+              <div class="corp-form__list2">
+                <div class="corp-form__item2 _textarea form__item">
+                  <label for="comments">Comments</label>
+                  <div class="corp-form__wrap-textarea">
+                    <textarea id="comments" name="comments"></textarea>
+                  </div>
+                </div>
+                <!-- /corp-form__item -->
 
-      //= modules/aside/aside2.html
+                <div class="corp-form__box-security">
+                  <div class="corp-form__item form__item">
+                    <label for="code">Security Code</label>
+                    <div class="wrap-input _mandatory">
+                      <input id="code" type="text">
+                      <div class="corp-form__input-desc">Please enter security code</div>
+                    </div>
+
+                  </div>
+                  <!-- /corp-form__item -->
+
+                  <div class="corp-form__code-img">
+                    <img src="static/img/other/securimage.png" alt="code">
+                  </div>
+                </div>
+
+              </div>
+              <!-- /corp-form__list2 -->
+
+              <div class="corp-form__wrap-btn">
+                <button class="corp-form__btn btn">Submit</button>
+              </div>
+
+            </form>
+
+            <div class="corp-form__mandatory red">* Mandatory Fields</div>
+
+          </section>
+
+        </div>
+        <!-- /content -->
+
+        //= modules/aside/aside2-corporate.html
 
       </div>
       <!-- /inner -->
@@ -48,4 +139,5 @@
   //= modules/scripts.html
 
 </body>
+
 </html>

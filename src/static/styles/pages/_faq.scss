@@ -1,0 +1,43 @@
+.faq {
+
+  &__quest-list {
+    border-bottom: 1px solid $c-hr-lite-grey;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__quest-item {
+    color: $c-main;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.4;
+    
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__answ-list {
+    line-height: 1.3;
+  }
+
+  &__answ-item {
+    padding-bottom: 8px;
+  }
+
+  &__q {
+    margin-bottom: 8px;
+  }
+
+  &__a {
+
+  }
+
+  &__a-list {
+    padding-left: 20px;
+  }
+
+  &__a-item {
+
+  }
+}

@@ -2,6 +2,10 @@
 @import "base/vars";
 @import "base/utils";
 @import "base/common";
+@import "base/title";
+@import "base/wrapper";
+@import "base/ather";
+
 @import "modules/buttons/btn";
 
 // small-blocks
@@ -11,13 +15,17 @@
 @import "modules/smallBlocks/examData";
 @import "modules/smallBlocks/boxGuarantCart";
 
+// modules
 @import "modules/slider/slider";
 @import "modules/slider/sliderV2";
 @import "modules/logo-list/logo-list";
 @import "modules/list/list";
 @import "modules/list/list-ol";
+@import "modules/form/form";
 
 @import "modules/header/header";
+
+@import "modules/aside/aside";
 
 // page
 @import "pages/home";
@@ -30,8 +38,10 @@
 @import "pages/cart";
 @import "pages/checkout";
 @import "pages/request-exam";
+@import "pages/corporate";
+@import "pages/faq";
+@import "pages/study";
 
-@import "modules/aside/aside";
 
 @import "modules/footer/footer";
 

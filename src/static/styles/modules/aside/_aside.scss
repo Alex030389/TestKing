@@ -13,10 +13,13 @@
     border-top: 1px solid #dddddd;
   }
 
-  &__b-block:not(:last-child) {
-    margin-bottom: 4px;
-    border-bottom: 1px solid #dddddd;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+  &__b-block {
+    
+    &._bb {
+      margin-bottom: 4px;
+      border-bottom: 1px solid #dddddd;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+    }
   }
 
   &._border {
@@ -106,6 +109,14 @@
     &._blue {
       color: #2e4c84;
     }
+
+    &._lite-blue {
+      color: #226cb1;
+    }
+
+    &._ta_left {
+      text-align: left;
+    }
   }
 
   &__title-2 {
@@ -168,11 +179,25 @@
 
   &__link {
     display: block;
+    padding-top: 5px;
 
     &._last {
       text-align: center;
       padding-bottom: 10px;
     }
+  }
+
+  &__list {
+    margin-bottom: 13px;
+
+    &._mb_0 {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item {
+    font-size: 12px;
+    margin-bottom: 4px;    
   }
 
   &._orange {
