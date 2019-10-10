@@ -1,0 +1,53 @@
+.serv-sert {
+  
+  &__box-img-text {
+    display: flex;    
+    margin-bottom: 24px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin-right: 10px;
+    flex-shrink: 0;
+
+    @media (max-width: $sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    line-height: 1.4;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: $c-title-dark;
+    background-color: #E1EBF6;
+    margin: -12px -13px 0;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+  }
+}
+
+.levels-1,
+.levels-2 {
+  color: $c-link-dark;
+  margin-left: 22px;
+  list-style-type: disc;
+  line-height: 1.3;
+
+  a {
+    text-decoration: underline;
+  }
+  
+  &__item {
+    margin-bottom: 10px;
+  }
+}
+
+.levels-2 {
+  margin-top: 10px;
+}
