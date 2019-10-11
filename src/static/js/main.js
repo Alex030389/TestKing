@@ -20,18 +20,18 @@ $(window).resize(function () {
 
 // =============================================== smooth scroll
 var $page = $('html, body');
-$('a[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
-    return false;
+$('a[href*="#"]').click(function () {
+  $page.animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
+  }, 400);
+  return false;
 });
 
 // =============================================== select link
 const searchCertificSelect = document.querySelector('.search-certifications__select select');
-if(searchCertificSelect) {
-  searchCertificSelect.addEventListener('change', function() {
-    if(this.value) {
+if (searchCertificSelect) {
+  searchCertificSelect.addEventListener('change', function () {
+    if (this.value) {
       window.location.href = this.value;
     }
   })
@@ -165,16 +165,28 @@ $('.slider-v2__list').slick({
 checkDisabledArrow();
 
 function checkDisabledArrow() {
-  if($('.slick-prev').hasClass('slick-disabled')) {
-    $('.slider-v2__btn.__prev').css({'opacity': '0', 'cursor': 'default'});
+  if ($('.slick-prev').hasClass('slick-disabled')) {
+    $('.slider-v2__btn.__prev').css({
+      'opacity': '0',
+      'cursor': 'default'
+    });
   } else {
-    $('.slider-v2__btn.__prev').css({'opacity': '1', 'cursor': 'pointer'});
+    $('.slider-v2__btn.__prev').css({
+      'opacity': '1',
+      'cursor': 'pointer'
+    });
   }
 
-  if($('.slick-next').hasClass('slick-disabled')) {
-    $('.slider-v2__btn.__next').css({'opacity': '0', 'cursor': 'default'});
+  if ($('.slick-next').hasClass('slick-disabled')) {
+    $('.slider-v2__btn.__next').css({
+      'opacity': '0',
+      'cursor': 'default'
+    });
   } else {
-    $('.slider-v2__btn.__next').css({'opacity': '1', 'cursor': 'pointer'});
+    $('.slider-v2__btn.__next').css({
+      'opacity': '1',
+      'cursor': 'pointer'
+    });
   }
 }
 
@@ -200,8 +212,19 @@ $('.tab-exam2__more').on('click', function () {
 })
 
 // =================================================================== lightbox
-if(document.querySelector('.slider-v2__item')) {
+if (document.querySelector('.slider-v2__item')) {
   $('.slider-v2__item').simpleLightbox();
+};
+
+// ==================================================================== acc-nav
+const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
+
+for(let i = 0; i < accNavBtn.length; i++) {
+  accNavBtn[i].addEventListener('click', function(e) {
+    const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
+    accNavItemCurrent.classList.remove('_current');
+    e.target.parentElement.classList.add('_current');
+  });
 }
 
 // ============================================================ footer

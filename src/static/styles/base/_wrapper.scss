@@ -19,6 +19,18 @@
   padding-bottom: 15px;
 }
 
+.content {
+  width: 100%;
+}
+
+.content-2 {
+  width: calc(100% - 268px);
+  
+  @media (max-width: $md) {
+    width: 100%;
+  }
+}
+
 .inner {
   display: flex;
   align-items: flex-start;
@@ -26,20 +38,6 @@
   @media (max-width: $md) {
     flex-direction: column;
   }
-
-  .content {
-    width: 100%;
-    margin-right: 10px;
-    // flex-grow: 1;
-
-    @media (max-width: $md) {
-      margin-right: 0;
-    }
-  }
-}
-
-section {
-  display: block;
 }
 
 .section {

@@ -4,6 +4,7 @@
   padding: 5px 10px;
   overflow: hidden;
   line-height: 16px;
+  margin-left: 10px;
 
   @media (max-width: $md) {
     width: 100%;
@@ -30,6 +31,10 @@
 
   &._p_0 {
     padding: 0;
+  }
+
+  @media (max-width: $md) {
+    margin-left: 0;
   }
 }
 

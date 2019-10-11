@@ -1,0 +1,110 @@
+.acc-nav-box {
+  margin-right: 10px;
+  width: 258px;
+  flex-shrink: 0;
+
+  @media (max-width: $md) {
+    margin-right: 0;
+    display: flex;
+    width: 100%;
+  }
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+}
+
+.acc-nav {
+  flex-shrink: 0;
+
+  @media (max-width: $md) {
+    width: calc(100% / 2 - 5px);
+  }
+
+  @media (max-width: $sm) {
+    width: 100%;
+  }
+
+  &__title {
+    padding: 9px 50px 7px 15px;
+    background: $c-lite-blue url(../img/other/logosm.png) no-repeat 93% 80%;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+
+    @media (max-width: $md) {
+      height: 170px;
+      overflow-y: auto;
+    }
+  }
+
+  &__item {
+
+    & > div {
+      padding: 5px 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 6px;
+    }
+
+    &._current {
+
+      & > div {
+        background: $c-lite-blue;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          right: 17px;
+          transform: rotate(45deg);
+          width: 12px;
+          height: 12px;
+          border-top: 3px solid #a6b7ca;
+          border-right: 3px solid #a6b7ca;
+
+          @media (max-width: $md) {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__list-2 {
+    // display: none;
+  }
+
+  &__item-2 {
+    font-size: 14px;
+    padding: 5px 5px 5px 40px;
+
+    button {
+      color: $c-title-dark;
+    }
+
+    &._current button {
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    color: $c-title-dark;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &:first-child {
+    @media (max-width: $md) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: $sm) {
+      margin-right: 0;
+    }
+  }
+}
