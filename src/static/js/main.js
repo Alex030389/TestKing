@@ -211,6 +211,61 @@ $('.tab-exam2__more').on('click', function () {
   }
 })
 
+// ================================================================ upgrade hide show
+$('.ma-home__additional-btn.upgrade').on('click', function() {
+  $(this).hide();
+  $('.ma-home__additional-btn.hide').fadeIn();
+  $('.ma-home__upgr').fadeIn();
+})
+
+$('.ma-home__additional-btn.hide').on('click', function() {
+  $(this).hide();
+  $('.ma-home__additional-btn.upgrade').fadeIn(200);
+  $('.ma-home__upgr').hide();
+})
+
+// =============================================================== upgrade
+const upgrInput = document.querySelectorAll('.ma-home__upgr-input');
+
+if (upgrInput.length) {
+  changePrice();
+}
+
+
+for (let i = 0; i < upgrInput.length; i++) {
+  upgrInput[i].addEventListener('change', function() {
+    changePrice();
+  })
+}
+
+function changePrice() {
+  const upgInputChecked = document.querySelectorAll('.ma-home__upgr-input:checked');
+  const numChecked = upgInputChecked.length;
+  const itemToSave = document.querySelector('.ma-home__upgr-save span');
+  const promotionalDiscount = document.querySelector('.ma-home__upgr-remain-right span');
+  const total = document.querySelector('.ma-home__upgr-total span');
+  const newTotalProcent = document.querySelector('.ma-home__upgr-new-total span:first-child');
+  const newTotal = document.querySelector('.ma-home__upgr-new-total span:last-child');
+  
+  const procent = 10 * numChecked;
+
+  let totalAmount = 0;
+
+  for (let i = 0; i < upgInputChecked.length; i++) {
+    totalAmount += +upgInputChecked[i].getAttribute('data-price')
+  }
+
+  let a = totalAmount / 100 * procent;
+  a = totalAmount - a;
+
+  itemToSave.textContent = 10 + procent;
+  promotionalDiscount.textContent = procent;
+  newTotalProcent.textContent = procent;
+  total.textContent = totalAmount.toFixed(2);
+  newTotal.textContent = a.toFixed(2);
+}
+
+
 // =================================================================== lightbox
 if (document.querySelector('.slider-v2__item')) {
   $('.slider-v2__item').simpleLightbox();
@@ -218,14 +273,28 @@ if (document.querySelector('.slider-v2__item')) {
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
+const maHome = document.querySelectorAll('.ma-home');
 
-for(let i = 0; i < accNavBtn.length; i++) {
-  accNavBtn[i].addEventListener('click', function(e) {
-    const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
-    accNavItemCurrent.classList.remove('_current');
-    e.target.parentElement.classList.add('_current');
-  });
+if(accNavBtn.length > 1) {
+  for(let i = 0; i < accNavBtn.length; i++) {
+    accNavBtn[i].addEventListener('click', function(e) {
+  
+      const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
+      accNavItemCurrent.classList.remove('_current');
+      e.target.parentElement.classList.add('_current');
+  
+      if(+e.target.getAttribute('data-id') === 0 ) {
+        maHome[0].classList.remove('_expired-prod');
+        maHome[1].classList.add('_expired-prod');
+      } else {
+        maHome[1].classList.remove('_expired-prod');
+        maHome[0].classList.add('_expired-prod');
+      }
+      
+    });
+  }
 }
+
 
 // ============================================================ footer
 (function () {

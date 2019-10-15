@@ -1,0 +1,52 @@
+.profile {
+
+  &__box {
+    padding-top: 12px;
+    padding-bottom: 3px;
+
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid $c-hr-lite-grey;
+      
+    }
+    &:first-child {
+
+    }
+  }
+
+  &__title {
+    color: $c-sky-blue;
+    font-size: 15px;
+  }
+
+  &__form-list {
+
+  }
+
+  &__form-item-checkbox {
+    margin-bottom: 11px;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__form-item {
+    max-width: 340px;
+    margin-bottom: 8px;
+
+    label {
+      width: 125px;
+    }
+
+    input {
+    }
+  }
+
+  
+}

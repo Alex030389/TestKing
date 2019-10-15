@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+//= modules/head.html
+
+<body>
+
+  //= modules/header/header.html
+
+  <main class="main">
+    <div class="wrap main-wrap">
+
+      //= modules/smallBlocks/breadCrumbs.html
+
+      <div class="inner-2">
+
+        //= modules/acc-nav/acc-nav.html
+
+        <div class="content-2">
+
+          <section class="section _border profile">
+            <h1 class="h1 _fsz_20">ACCOUNT SETTINGS</h1>
+
+            <div class="profile__box">
+              <h2 class="profile__title">GENERAL NOTIFICATIONS</h2>
+              <ul class="profile__form-list">
+                <li class="profile__form-item-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    Include me in Testking mailing list.
+                  </label>
+                </li>
+                <li class="profile__form-item-checkbox">
+                  <label>
+                    <input checked type="checkbox">
+                    I want to be notified when my products have been updated.
+                  </label>
+                </li>
+                <li class="profile__form-item-checkbox">
+                  <label>
+                    <input type="checkbox">
+                    I want to receive special offers from Testking partners.
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="profile__box">
+              <h2 class="profile__title">EMAIL ADDRESS & PASSWORD</h2>
+              <ul class="profile__form-list">
+                <li class="profile__form-item form__item">
+                  <label for="current-email">Current Email Address:</label>
+                  <input id="current-email" name="current-email" value="h.schneider@bechtle.com" readonly type="email">
+                </li>
+                <li class="profile__form-item form__item">
+                  <label for="new-email">New Email Address:</label>
+                  <input id="new-email" name="new-email" type="email">
+                </li>
+                <li class="profile__form-item form__item">
+                  <label for="new-password">New Password:</label>
+                  <input id="new-password" name="new-password" type="password">
+                </li>
+                <li class="profile__form-item form__item">
+                  <label for="confirm-password:">Confirm Password:</label>
+                  <input id="confirm-password" name="confirm-password" type="password">
+                </li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+        <!-- /content -->
+
+      </div>
+      <!-- /inner -->
+    </div>
+    <!-- /wrap -->
+  </main>
+
+  //= modules/footer/footer.html
+  //= modules/scripts.html
+
+</body>
+
+</html>

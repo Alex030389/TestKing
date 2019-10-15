@@ -12,13 +12,25 @@
   border-bottom-color: #a85f02;
   border-radius: 5px;
   background-color: #febe1d;
-  background: linear-gradient(to bottom, #fec11e 0%, #ee8300 100%);
+  background: linear-gradient(to bottom, #fec11e, #ee8300);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 1px #ffe7a5;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
   transition: .2s;
-
+  
   &:hover {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0), inset 0px 1px 1px #fec11e;
+  }
+  
+  &._blue {
+    border: solid 1px #50b5d5;
+    background-color: #2569a6;
+    border-bottom-color: #2569a6;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 1px #bbe7f1;
+    background: linear-gradient(to bottom, #6bcae0, #2569a6);
+
+    &:hover {
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0), inset 0px 1px 1px #50b5d5;
+    }
   }
 }
 
@@ -43,18 +55,20 @@
 }
 
 .btn-blue {
-  padding: 6px 21px;
+  // padding: 6px 21px;
   color: #fff;
   font-family: $ff-title;
   text-align: center;
   font-weight: 700;
-  font-size: 11px;
+  // font-size: 11px;
   display: inline-block;
   border-radius: 4px;
   background: linear-gradient(to bottom, rgb(97,167,220), rgb(42,112,165));
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   transition: .2s;
+
+  font-size: 15px;
 
   &:hover {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0);
