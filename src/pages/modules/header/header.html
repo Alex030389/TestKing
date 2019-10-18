@@ -2,12 +2,20 @@
   <div class="wrap header__top">
     <div class="header__logo logo">
       <a href="/">
-        <img src="static/img/logo.png" alt="logo">
+        <img src="/design/images/logo.png" alt="logo">
       </a>
     </div>
 
     <form action="#" class="header__search search">
       <input class="search__input" type="text" placeholder="Search">
+      <ul class="search__res" id="resSearch">
+        <li class="search__res-item">One</li>
+        <li class="search__res-item">Two</li>
+        <li class="search__res-item">Three</li>
+        <li class="search__res-item">Three</li>
+        <li class="search__res-item">Three</li>
+        <li class="search__res-item">Three</li>
+      </ul>
       <button class="search__btn btn"></button>
     </form>
 
@@ -307,8 +315,23 @@
       </div>
 
       <ul class="header__user-nav user-nav">
-        <li class="user-nav__item">
-          <a href="#" class="user-nav__link">My Account</a>
+        <li class="user-nav__item _left">
+          <a href="#" class="user-nav__link _left">My Account</a>
+
+          <ul class="user-nav__sub-n _acc">
+            <li class="user-nav__sub-n-item">
+              <a class="user-nav__sub-n-link" href="#">My Products</a>
+            </li>
+            <li class="user-nav__sub-n-item">
+              <a class="user-nav__sub-n-link" href="#">MY Settings</a>
+            </li>
+            <li class="user-nav__sub-n-item">
+              <a class="user-nav__sub-n-link" href="#">My Invoices</a>
+            </li>
+            <li class="user-nav__sub-n-item">
+              <a class="user-nav__sub-n-link" href="#">FAQs</a>
+            </li>
+          </ul>
         </li>
         <li class="user-nav__item">
           <a href="#" class="user-nav__link">
@@ -316,8 +339,24 @@
           </a>
         </li>
         <li class="user-nav__item">
-          <a href="#" class="user-nav__link">Log In</a>
-          <!-- <a href="#" class="user-nav__link">Log Out</a> -->
+          <a class="user-nav__link _right">Log In</a>
+
+          <div class="user-nav__sub-n _reg">
+            <form class="user-nav__sub-n-form" action="">
+              <div class="form__item">
+                <label for="email">Email address:</label>
+                <input id="email" name="email" type="email">
+              </div>
+              <div class="form__item">
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="text">
+              </div>
+              <a class="user-nav__sub-n-forgot" href="#">Forgot your password?</a>
+              <div class="user-nav__sub-n-box-btn">
+                <button class="user-nav__sub-n-btn btn">Login</button>
+              </div>              
+            </form>
+          </div>
         </li>
       </ul>
     </div>
