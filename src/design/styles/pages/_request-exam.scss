@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
 
-    label {
+    & > label {
       font-size: 15px;
       font-weight: 700;
       color: $c-title-light;
@@ -55,6 +55,10 @@
 
     &._mb_23 {
       margin-bottom: 23px;
+    }
+
+    &._mt_10 {
+      margin-top: 10px;
     }
   }
 

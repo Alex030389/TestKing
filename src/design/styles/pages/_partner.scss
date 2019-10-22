@@ -1,0 +1,46 @@
+.partner {
+
+  &__chanel-box {
+    padding-top: 0;
+  }
+}
+
+.how-it {
+
+  &__list {
+    
+  }
+
+  &__item {
+
+  }
+
+  &__title-1 {
+    font-size: 18px;
+    color: $c-title-dark;
+    margin-bottom: 5px;
+  }
+
+  &__text-1 {
+    padding-left: 25px;
+  }
+
+  &__list-2 {
+    padding-left: 25px;
+  }
+
+  &__item-2 {
+
+  }
+
+  &__title-2 {
+    font-size: 18px;
+    color: $c-title-dark;
+    margin-bottom: 5px;
+  }
+
+  &__text-2 {
+    padding-left: 75px;
+    margin-bottom: 10px;
+  }
+}

@@ -46,6 +46,12 @@
 @import "pages/signup";
 @import "pages/serviceManagement";
 @import "pages/serverCertification";
+@import "pages/resetpassword";
+@import "pages/demo";
+@import "pages/bargainDeals";
+@import "pages/feedback";
+@import "pages/sitemap";
+@import "pages/partner";
 
 // member_area
 @import "modules/acc-nav/acc-nav";
@@ -63,6 +69,29 @@
   display: block;
 }
 
+.error_message {
+  color: red;
+
+  p {
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+}
+
+#jsLogin {
+  margin-bottom: 10px;
+
+  table {
+    width: 100%;
+  }
+}
+
+#jsReg {
+  margin-bottom: 10px;
+  table {
+    width: 100%;
+  }
+}
 
 @import "modules/footer/footer";
 

@@ -1,0 +1,42 @@
+.bargain {
+
+  &__list {
+  }
+
+  &__item {
+    padding: 13px 0;
+    font-size: 13px;
+
+    &:not(:first-child) {
+      border-top: 1px solid $c-hr-lite-grey;
+    }
+  }
+
+  &__top {
+    line-height: 1.5;    
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__includes {
+    margin-right: 15px;
+  }
+
+  &__form {
+
+  }
+
+  &__btn {
+    padding: 7px 18px;
+    white-space: nowrap;
+
+    @media (max-width: $sm) {
+      padding: 5px 10px;
+    }
+  }
+}

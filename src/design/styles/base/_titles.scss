@@ -45,8 +45,21 @@
   font-family: $ff-title;
   color: $c-title-dark;
 
+  &._fsz_16 {
+    font-size: 16px;
+  }
+
+  // dell
   &._m_sm {
     margin-bottom: 5px;
+  }
+
+  &._mb_5 {
+    margin-bottom: 5px;
+  }
+
+  &._mb_8px {
+    margin-bottom: 10px;
   }
 }
 
