@@ -4,8 +4,10 @@
     border-bottom: 1px solid $c-hr-lite-grey;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    // padding-left: 20px;
+    list-style: inside decimal;
   }
-
+  
   &__quest-item {
     color: $c-main;
     font-weight: 700;

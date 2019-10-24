@@ -19,13 +19,13 @@ $(window).resize(function () {
 })
 
 // =============================================== smooth scroll
-var $page = $('html, body');
-$('a[href*="#"]').click(function () {
-  $page.animate({
-    scrollTop: $($.attr(this, 'href')).offset().top
-  }, 400);
-  return false;
-});
+// var $page = $('html, body');
+// $('a[href*="#"]').click(function () {
+//   $page.animate({
+//     scrollTop: $($.attr(this, 'href')).offset().top
+//   }, 400);
+//   return false;
+// });
 
 // =============================================== select link
 const searchCertificSelect = document.querySelector('.search-certifications__select select');
@@ -298,11 +298,31 @@ function changePrice() {
   newTotal.textContent = a.toFixed(2);
 }
 
+// ========================================== test magnific-popup
+$('.slider-v2__list').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  gallery:{
+    enabled:true
+  },
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup 
+       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  closeOnContentClick: true,
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+
+});
+
 
 // =================================================================== lightbox
-if (document.querySelector('.slider-v2__item')) {
-  $('.slider-v2__item').simpleLightbox();
-};
+// if (document.querySelector('.slider-v2__item')) {
+//   $('.slider-v2__item').simpleLightbox();
+// };
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');

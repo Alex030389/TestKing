@@ -52,6 +52,8 @@
 @import "pages/feedback";
 @import "pages/sitemap";
 @import "pages/partner";
+@import "pages/content";
+
 
 // member_area
 @import "modules/acc-nav/acc-nav";
@@ -63,35 +65,13 @@
 @import "pages/invoice";
 
 
-.errmess {
-  padding-bottom: 10px;
-  color: #ff9966;
-  display: block;
-}
+//plagins
+@import "modules/magnificStyles";
 
-.error_message {
-  color: red;
 
-  p {
-    margin-bottom: 3px;
-    font-size: 12px;
-  }
-}
+// errors
+@import "modules/errors";
 
-#jsLogin {
-  margin-bottom: 10px;
-
-  table {
-    width: 100%;
-  }
-}
-
-#jsReg {
-  margin-bottom: 10px;
-  table {
-    width: 100%;
-  }
-}
 
 @import "modules/footer/footer";
 

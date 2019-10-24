@@ -42,5 +42,9 @@
   &__text-2 {
     padding-left: 75px;
     margin-bottom: 10px;
+
+    @media (max-width: $sm) {
+      padding-left: 20px;
+    }
   }
 }

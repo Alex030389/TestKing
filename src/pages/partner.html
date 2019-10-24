@@ -77,19 +77,12 @@
 
           <section class="section _border">
               <form action="#">
-                  <h2 class="corp-form__title">Please fill out your information below and Testking License Program Manager
-                    will get back to you with best solution according to your requirements:</h2>
+                  <h2 class="corp-form__title">Please fill out your contact details and requirements below for our Testking Partnership Manager to provide you with best solution.</h2>
                   <ul class="corp-form__list">
                     <li class="corp-form__item form__item">
-                      <label for="first-name">Contact Name:</label>
+                      <label for="name">Contact Name:</label>
                       <div class="wrap-input _mandatory">
-                        <input id="first-name" name="first-name" type="text">
-                      </div>
-                    </li>
-                    <li class="corp-form__item form__item">
-                      <label for="company">Company:</label>
-                      <div class="wrap-input">
-                        <input id="company" name="company" type="text">
+                        <input id="name" name="name" type="text">
                       </div>
                     </li>
                     <li class="corp-form__item form__item">
@@ -99,9 +92,17 @@
                       </div>
                     </li>
                     <li class="corp-form__item form__item">
-                      <label for="url">Web Site URL:</label>
+                      <label for="country">Country: </label>
+                      <div class="wrap-input _mandatory">
+                        <select name="country" id="country">
+                          <option value selected>Select Country</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="corp-form__item form__item">
+                      <label for="city">City:</label>
                       <div class="wrap-input">
-                        <input id="url" name="url" type="text">
+                        <input id="city" name="city" type="text">
                       </div>
                     </li>
                     <li class="corp-form__item form__item">
@@ -111,11 +112,25 @@
                       </div>
                     </li>
                     <li class="corp-form__item form__item">
-                      <label for="country">Country: </label>
+                      <label for="interest">Volume of Interest: </label>
                       <div class="wrap-input _mandatory">
-                        <select name="country" id="country">
-                          <option value selected>Select Country</option>
+                        <select name="interest" id="interest">
+                          <option value selected>0-100 copieds</option>
                         </select>
+                      </div>
+                    </li>
+                    <li class="corp-form__item form__item">
+                      <label for="who-are-you">Who Are You: </label>
+                      <div class="wrap-input _mandatory">
+                        <select name="who-are-you" id="who-are-you">
+                          <option value selected>0-100 copieds</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li class="corp-form__item form__item">
+                      <label for="company">Company Name: </label>
+                      <div class="wrap-input">
+                        <input id="company" name="company" type="text">
                       </div>
                     </li>
                   </ul>
@@ -150,7 +165,7 @@
                   <!-- /corp-form__list2 -->
     
                   <div class="corp-form__wrap-btn">
-                    <button class="corp-form__btn btn">Submit</button>
+                    <button class="corp-form__btn btn">Sign Up For Channel Partner Program</button>
                   </div>
     
                 </form>

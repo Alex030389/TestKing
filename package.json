@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
     "selectric": "^1.13.0",
     "simplelightbox": "^1.17.2",
