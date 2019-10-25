@@ -77,6 +77,16 @@ gulp.task('css', function () {
     .pipe(browserSync.stream())
 });
 
+gulp.task('css:host', function () {
+  return gulp.src('src/design/styles/main.scss')
+    .pipe(sass())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(autoprefixer(['last 15 versions']))
+    .pipe(cleancss())
+    .pipe(gulp.dest('s:/host02/design/css'))
+    .pipe(browserSync.stream())
+});
+
 gulp.task('css:build', function () {
   return gulp.src('src/design/styles/main.scss')
     .pipe(sass().on("error", notify.onError()))
@@ -168,6 +178,7 @@ gulp.task('img:build', function () {
 gulp.task('watch', function () {
   gulp.watch('src/pages/**/*.html', gulp.series('html'));
   gulp.watch('src/design/styles/**/*.scss', gulp.series('css'));
+  gulp.watch('src/design/styles/**/*.scss', gulp.series('css:host'));
   gulp.watch('src/design/js/**/*.js', gulp.series('js'));
 });
 
@@ -179,6 +190,7 @@ gulp.task('default', gulp.series(
     'fonts',
     'css:libs',
     'css',
+    'css:host',
     'js:libs',
     'js',
     'watch',

@@ -318,11 +318,12 @@ $('.slider-v2__list').magnificPopup({
 
 });
 
-
-// =================================================================== lightbox
-// if (document.querySelector('.slider-v2__item')) {
-//   $('.slider-v2__item').simpleLightbox();
-// };
+// =========================================== modal
+// $('.popup-content').magnificPopup({
+//   type: 'inline',
+//   alignTop: true,
+//   showCloseBtn: false
+// });
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');

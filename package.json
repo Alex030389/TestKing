@@ -7,7 +7,8 @@
     "start": "gulp",
     "build": "gulp build",
     "img": "gulp img",
-    "font": "gulp fonts"
+    "font": "gulp fonts",
+    "css-host": "gulp css:host"
   },
   "author": "AlexKa",
   "license": "ISC",
