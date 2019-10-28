@@ -40,10 +40,15 @@
 
   &__item {
     margin-bottom: 13px;
+    font-weight: 700;
 
     a {
       color: #226cb1;
       text-decoration: underline;
+    }
+
+    &._fsz_14 {
+      font-size: 14px;
     }
   }
 }

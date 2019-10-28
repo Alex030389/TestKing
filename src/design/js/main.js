@@ -325,6 +325,35 @@ $('.slider-v2__list').magnificPopup({
 //   showCloseBtn: false
 // });
 
+if(modalNumber) {
+  if(modalNumber === 1) {
+    marginificInitialize('#offer1');
+  } else if (modalNumber === 2) {
+    marginificInitialize('#offer2');
+  }
+}
+
+
+function marginificInitialize(offer) {
+  $.magnificPopup.open({
+    items: {
+    src: offer
+  },
+    modal: true,
+    type: 'inline',
+    alignTop: true,
+    showCloseBtn: false
+  }, 0);
+}
+
+document.querySelector('.modal__close').addEventListener('click', function() {
+  $.magnificPopup.close();
+})
+
+document.querySelector('.modal__btn._shop').addEventListener('click', function() {
+  $.magnificPopup.close();  
+})
+
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
 const maHome = document.querySelectorAll('.ma-home');
