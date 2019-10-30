@@ -4,6 +4,7 @@
   &__box-img-title {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   &__img {
@@ -25,74 +26,52 @@
 
 
 // =============================================== level
+.tab-content {
+
+  &__title {
+    background-color: #e1ebf6;
+    padding: 9px 13px 7px;
+    margin: 0 -13px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #274479;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__title-2 {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 700;
+
+    a {}
+  }
+}
+
 .level-1 {
 
-  &__item {
-    & > p {
-      background-color: #e1ebf6;
-      padding: 9px 13px 7px;
-      margin: 0 -13px;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 14px;
-      color: #274479;
-
-      a:hover {
-        text-decoration: underline;
-      }
-    }
+  strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
   }
-}
 
-.level-2 {
+  ul {
+    margin-bottom: 15px;
+  }
 
-  &__item {
-    & > p {
-      font-size: 14px;
-      font-weight: 700;
+  li {
+    list-style: disc;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+
+    a {
       text-decoration: underline;
-    }
-
-    &._v2 {
-      list-style: disc;
-      margin-left: 15px;
-
-      & > p {
-        text-decoration: none !important;
-        font-weight: 400;
-        font-size: 12px;
-
-        a {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-.level-3 {
-
-  &__item {
-    list-style: disc;
-    margin-left: 23px;
-
-    & > p {
-      font-weight: 700;
-    }
-  }
-}
-
-.level-4 {
-
-  &__item {
-    list-style: disc;
-    margin-left: 23px;
-
-    p {
-
-      a {
-        text-decoration: underline;
-      }
     }
   }
 }

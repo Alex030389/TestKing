@@ -1,0 +1,25 @@
+.up {
+  width: 35px;
+  height: 35px;
+  border: solid 1px #f4930b;
+  border-bottom-color: #a85f02;
+  border-radius: 50%;
+  background-color: #febe1d;
+  background: linear-gradient(to bottom, #fec11e, #ee8300);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 1px #ffe7a5;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  opacity: .4;
+  transition: .3s;
+  transform: translateX(100px);
+
+  img {
+    width: 16px;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

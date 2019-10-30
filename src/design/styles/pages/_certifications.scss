@@ -39,9 +39,11 @@
 .levelb-1 {
 
   &__item {
-    margin-bottom: 13px;
+    // margin-bottom: 13px;
     font-weight: 700;
-
+    margin-bottom: 0;
+    margin-top: 13px;
+    
     a {
       color: #226cb1;
       text-decoration: underline;

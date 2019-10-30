@@ -135,6 +135,17 @@ $('.tab__btn').on('click', function () {
   // $('.tab-content__item').eq(id).addClass('active');
 })
 
+// ======================================================== testimonials
+$('.b-block__link').on('click', function() {
+  if($(this).text() === 'View All') {
+    $(this).text('Hide All');
+    $('.b-feedbacks__item').slideDown();
+  } else {
+    $(this).text('View All');
+    $('.b-feedbacks__item:nth-child(n + 4)').slideUp();
+  }
+})
+
 // ======================================================== changes the price
 const exam1Checkbox = document.querySelector('#exam1__checkbox');
 const exam1PlusElement = document.querySelector('.exam1__box-input-label .ex-pr');
@@ -325,13 +336,13 @@ $('.slider-v2__list').magnificPopup({
 //   showCloseBtn: false
 // });
 
-if(modalNumber) {
-  if(modalNumber === 1) {
+try {
+  if(modalNumber === 1) { 
     marginificInitialize('#offer1');
   } else if (modalNumber === 2) {
     marginificInitialize('#offer2');
   }
-}
+} catch(e) {}
 
 
 function marginificInitialize(offer) {
@@ -346,13 +357,20 @@ function marginificInitialize(offer) {
   }, 0);
 }
 
-document.querySelector('.modal__close').addEventListener('click', function() {
-  $.magnificPopup.close();
-})
+let modalClose = document.querySelector('.modal__close');
+let modalBtnShop = document.querySelector('.modal__btn._shop')
 
-document.querySelector('.modal__btn._shop').addEventListener('click', function() {
-  $.magnificPopup.close();  
-})
+if(modalClose) {
+  modalClose.addEventListener('click', function() {
+    $.magnificPopup.close();
+  })
+}
+
+if(modalBtnShop) {
+  modalBtnShop.addEventListener('click', function() {
+    $.magnificPopup.close();  
+  })
+}
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
@@ -377,6 +395,22 @@ if (accNavBtn.length > 1) {
     });
   }
 }
+
+// ============================================================= up
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1500) {
+    // $('.up').fadeIn();
+    $('.up').css({"transform": "translateX(0)"});
+  } else {
+    $('.up').css({"transform": "translateX(100px)"});;
+  }
+});
+
+$('.up').on('click', function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500);
+});
 
 
 // ============================================================ footer
