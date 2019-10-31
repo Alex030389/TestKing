@@ -1,4 +1,8 @@
 .serv-sert {
+
+  &__section {
+    color: $c-link-dark;
+  }
   
   &__box-img-text {
     display: flex;    
