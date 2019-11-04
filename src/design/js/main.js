@@ -16,7 +16,7 @@ $(window).resize(function () {
     body.style.overflowY = 'auto';
   }
 
-})
+});
 
 // =============================================== smooth scroll
 // var $page = $('html, body');
@@ -49,7 +49,7 @@ $('.js.header__hamburger').click(function () {
     $('.header__m-box-nav').closest('.header__wrap-m-box').slideUp();
     body.style.overflowY = 'auto';
   }
-})
+});
 
 $('.js.search__btn').click(function () {
   $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
@@ -61,7 +61,7 @@ $('.js.search__btn').click(function () {
     $('.header__m-search').closest('.header__wrap-m-box').slideUp();
     body.style.overflowY = 'auto';
   }
-})
+});
 
 
 // =================================================== ddmenu
@@ -69,19 +69,19 @@ let timerCloseDDmenu;
 
 $('.main-nav__link.dropdown').mouseenter(function () {
   $('.main-nav__wrap-ddmenu').slideDown(200);
-})
+});
 
 $('.main-nav__link.dropdown').mouseleave(function () {
   timerCloseDDmenu = setTimeout(closeDDmenu, 150);
-})
+});
 
 $('.main-nav__wrap-ddmenu').mouseenter(function () {
   clearTimeout(timerCloseDDmenu);
-})
+});
 
 $('.main-nav__wrap-ddmenu').mouseleave(function () {
   closeDDmenu();
-})
+});
 
 
 function closeDDmenu() {
@@ -93,19 +93,19 @@ let timerCloseUserSubNav;
 
 $('.user-nav__link._left').mouseenter(function () {
   $('.user-nav__sub-n._acc').slideDown(200);
-})
+});
 
 $('.user-nav__link._left').mouseleave(function () {
   timerCloseUserSubNav = setTimeout(closeUserSubNav, 200);
-})
+});
 
 $('.user-nav__sub-n._acc').mouseenter(function () {
   clearTimeout(timerCloseUserSubNav);
-})
+});
 
 $('.user-nav__sub-n._acc').mouseleave(function () {
   closeUserSubNav();
-})
+});
 
 
 function closeUserSubNav() {
@@ -120,7 +120,7 @@ $('.user-nav__link._right').on('click', function() {
   } else {
     $('.user-nav__sub-n._reg').slideUp(200);
   }
-})
+});
 
 // ======================================================= tab
 $('.tab__btn').on('click', function () {
@@ -133,7 +133,7 @@ $('.tab__btn').on('click', function () {
   $('.tab-content__item').eq(id).fadeIn();
   // $('.tab-content__item').removeClass('active');
   // $('.tab-content__item').eq(id).addClass('active');
-})
+});
 
 // ======================================================== testimonials
 $('.b-block__link').on('click', function() {
@@ -144,7 +144,7 @@ $('.b-block__link').on('click', function() {
     $(this).text('View All');
     $('.b-feedbacks__item:nth-child(n + 4)').slideUp();
   }
-})
+});
 
 // ======================================================== changes the price
 const exam1Checkbox = document.querySelector('#exam1__checkbox');
@@ -167,23 +167,23 @@ if (exam1Checkbox) {
 // ======================================================== add cart
 $('.exam-add-cart__btn').on('click', function () {
   $('.exam-add-cart__wrap-response').fadeIn();
-})
+});
 
 // ======================================================== add cart purchase
 $('.purchase__add-to-cart').on('click', function () {
   $(this).closest('.purchase__box-add-to-cart').find('.purchase__wrap-response').fadeIn();
   $(this).hide();
-})
+});
 
 
 // ========================================================== slick
 $('.slider__arrow._prev').on('click', function () {
   $('.slick-prev').click();
-})
+});
 
 $('.slider__arrow._next').on('click', function () {
   $('.slick-next').click();
-})
+});
 
 $('.slider__list').slick({
   slidesToShow: 1,
@@ -237,12 +237,12 @@ function checkDisabledArrow() {
 $('.slider-v2__btn.__prev').on('click', function () {
   $('.slick-prev').click();
   checkDisabledArrow();
-})
+});
 
 $('.slider-v2__btn.__next').on('click', function () {
   $('.slick-next').click();
   checkDisabledArrow();
-})
+});
 
 // ================================================================= tab-exam2__more
 $('.tab-exam2__more').on('click', function () {
@@ -253,20 +253,20 @@ $('.tab-exam2__more').on('click', function () {
     $('.tab-exam2__desc-p').hide();
     $(this).text('More...');
   }
-})
+});
 
 // ================================================================ upgrade hide show
 $('.ma-home__additional-btn.upgrade').on('click', function () {
   $(this).hide();
   $('.ma-home__additional-btn.hide').fadeIn();
   $('.ma-home__upgr').fadeIn();
-})
+});
 
 $('.ma-home__additional-btn.hide').on('click', function () {
   $(this).hide();
   $('.ma-home__additional-btn.upgrade').fadeIn(200);
   $('.ma-home__upgr').hide();
-})
+});
 
 // =============================================================== upgrade
 const upgrInput = document.querySelectorAll('.ma-home__upgr-input');

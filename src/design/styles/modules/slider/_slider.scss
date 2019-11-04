@@ -53,11 +53,11 @@
     width: calc(100% / 3);
 
     &._prev {
-      background-image: url(../img/icon/carleft.png);
+      background-image: url(/design/images/carleft.png);
     }
 
     &._next {
-      background-image: url(../img/icon/caright.png);
+      background-image: url(/design/images/caright.png);
     }
 
     @media (max-width: $md) {
