@@ -1,15 +1,28 @@
+//font-weight
 .bold {
   font-weight: 700;
+}
+
+//font-size
+.fsz_16 {
+  font-size: 10px;
 }
 
 .lh_1-3 {
   line-height: 1.3;
 }
 
+.mb_0 {
+  margin-bottom: 0;
+}
+
 .underline {
   text-decoration: underline;
 }
 
+
+
+//colors
 .blue {
   color: $c-link-dark;
 }
@@ -18,6 +31,7 @@
   color: red;
 }
 
+//
 .link {
   text-decoration: underline;
   color: $c-link-dark;

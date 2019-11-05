@@ -1,0 +1,108 @@
+.modal-d {
+
+  &__title {
+    font-size: 19px;
+    color: $c-sky-blue;
+    text-align: center;
+    padding: 0 35px;
+    margin-bottom: 12px;
+    font-weight: 700;
+
+    @media (max-width: $sm) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $ssm) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 15px;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form {
+    max-width: 530px;
+    margin: 0 auto 20px;
+    background-color: #f1f7fc;
+  }
+
+  &__form-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    @media (max-width: $xsm) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-label {
+    margin-right: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: $xsm) {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  &__form-span {
+    margin-right: 10px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form-input {
+    padding: 5px;
+    flex-grow: 1;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+
+  &__form-btn {
+    padding: 7px 15px;
+    white-space: nowrap;
+
+    @media (max-width: $sm) {
+      align-self: flex-end;
+    }
+
+    @media (max-width: $xsm) {
+      align-self: center;
+      margin-bottom: 5px;
+    }
+  }
+
+
+  &__form-note {
+    color: $c-sky-blue;
+  }
+
+  &__form-note {
+  }
+
+  &__note {
+    font-style: italic;
+    color: $c-main-lite;
+    margin-bottom: 0;
+  }
+}

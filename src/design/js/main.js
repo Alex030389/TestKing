@@ -131,8 +131,6 @@ $('.tab__btn').on('click', function () {
 
   $('.tab-content__item').hide();
   $('.tab-content__item').eq(id).fadeIn();
-  // $('.tab-content__item').removeClass('active');
-  // $('.tab-content__item').eq(id).addClass('active');
 });
 
 // ======================================================== testimonials
@@ -146,28 +144,6 @@ $('.b-block__link').on('click', function() {
   }
 });
 
-// ======================================================== changes the price
-const exam1Checkbox = document.querySelector('#exam1__checkbox');
-const exam1PlusElement = document.querySelector('.exam1__box-input-label .ex-pr');
-const exam1OldPrice = document.querySelector('.exam-add-cart__old-price .ex-pr');
-const exam1NewPrice = document.querySelector('.exam-add-cart__new-price .ex-pr');
-
-if (exam1Checkbox) {
-  exam1Checkbox.addEventListener('click', function () {
-    if (this.checked) {
-      exam1OldPrice.textContent = (+exam1OldPrice.textContent + +exam1PlusElement.textContent).toFixed(2);
-      exam1NewPrice.textContent = (+exam1NewPrice.textContent + +exam1PlusElement.textContent).toFixed(2);
-    } else {
-      exam1OldPrice.textContent = (+exam1OldPrice.textContent - +exam1PlusElement.textContent).toFixed(2);
-      exam1NewPrice.textContent = (+exam1NewPrice.textContent - +exam1PlusElement.textContent).toFixed(2);
-    }
-  })
-}
-
-// ======================================================== add cart
-$('.exam-add-cart__btn').on('click', function () {
-  $('.exam-add-cart__wrap-response').fadeIn();
-});
 
 // ======================================================== add cart purchase
 $('.purchase__add-to-cart').on('click', function () {
@@ -330,14 +306,19 @@ $('.slider-v2__list').magnificPopup({
 });
 
 // =========================================== modal
-// $('.popup-content').magnificPopup({
-//   type: 'inline',
-//   alignTop: true,
-//   showCloseBtn: false
-// });
+// $('.exam1__wrap-link-demo button').click(function() {
+//
+// })
+
+$('.exam1__wrap-link-demo button').magnificPopup({
+    type: 'inline',
+    modal: true,
+    alignTop: true,
+    showCloseBtn: false
+});
 
 try {
-  if(modalNumber === 1) { 
+  if(modalNumber === 1) {
     marginificInitialize('#offer1');
   } else if (modalNumber === 2) {
     marginificInitialize('#offer2');
@@ -348,10 +329,10 @@ try {
 function marginificInitialize(offer) {
   $.magnificPopup.open({
     items: {
-    src: offer
-  },
-    modal: true,
+      src: offer
+    },
     type: 'inline',
+    modal: true,
     alignTop: true,
     showCloseBtn: false
   }, 0);
@@ -368,7 +349,7 @@ if(modalClose) {
 
 if(modalBtnShop) {
   modalBtnShop.addEventListener('click', function() {
-    $.magnificPopup.close();  
+    $.magnificPopup.close();
   })
 }
 

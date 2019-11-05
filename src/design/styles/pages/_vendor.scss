@@ -54,7 +54,7 @@
 }
 
 .level-1 {
-  
+  color: $c-link-dark;
 
   strong {
     font-weight: 700;
@@ -75,5 +75,10 @@
     a {
       text-decoration: underline;
     }
+  }
+
+  .sp2 {
+    list-style-type: none;
+    font-weight: 700;
   }
 }

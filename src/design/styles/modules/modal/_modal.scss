@@ -1,6 +1,11 @@
+// magnific-popup plagin
+.mfp-bg {
+  opacity: .7;
+}
+
 .modal {
   margin: 20vh auto 15px;
-  padding: 35px 16px;
+  padding: 16px 16px;
   border: 3px solid #b6cce3;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -17,6 +22,7 @@
 
   &__box-title {
     text-align: center;
+    padding: 0 30px;
   }
 
   &__title-line1 {

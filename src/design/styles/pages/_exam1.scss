@@ -34,10 +34,17 @@
   }
 
   &__wrap-link-demo {
-    color: $c-link-dark;
-    text-decoration: underline;
-    font-size: 18px;
     text-align: center;
+
+    button {
+      color: $c-link-dark;
+      text-decoration: underline;
+      font-size: 18px;
+    }
+
+    #isie6 {
+      display: none;
+    }
   }
 
   &__content {
@@ -47,8 +54,8 @@
   }
 
   &__h1 {
-    font-size: 20px;
-    margin-bottom: 1-px;
+    font-size: 26px;
+    //margin-bottom: 1-px;
   }
 
   &__subtitle {
