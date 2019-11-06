@@ -306,16 +306,6 @@ $('.slider-v2__list').magnificPopup({
 });
 
 // =========================================== modal
-// $('.exam1__wrap-link-demo button').click(function() {
-//
-// })
-
-$('.exam1__wrap-link-demo button').magnificPopup({
-    type: 'inline',
-    modal: true,
-    alignTop: true,
-    showCloseBtn: false
-});
 
 try {
   if(modalNumber === 1) {
@@ -338,13 +328,15 @@ function marginificInitialize(offer) {
   }, 0);
 }
 
-let modalClose = document.querySelector('.modal__close');
+let modalClose = document.querySelectorAll('.modal__close');
 let modalBtnShop = document.querySelector('.modal__btn._shop')
 
 if(modalClose) {
-  modalClose.addEventListener('click', function() {
-    $.magnificPopup.close();
-  })
+  for(let i = 0; i < modalClose.length; i++) {
+    modalClose[i].addEventListener('click', function() {
+      $.magnificPopup.close();
+    })
+  }
 }
 
 if(modalBtnShop) {
@@ -352,6 +344,20 @@ if(modalBtnShop) {
     $.magnificPopup.close();
   })
 }
+
+$('[href="#modal-download"]').magnificPopup({
+  type: 'inline',
+  // modal: true,
+  alignTop: true,
+  showCloseBtn: false
+});
+
+$('[data-mfp-src="#modal-details"]').magnificPopup({
+  type: 'inline',
+  // modal: true,
+  alignTop: true,
+  showCloseBtn: false
+})
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
@@ -372,7 +378,6 @@ if (accNavBtn.length > 1) {
         maHome[1].classList.remove('_expired-prod');
         maHome[0].classList.add('_expired-prod');
       }
-
     });
   }
 }

@@ -1,0 +1,55 @@
+.pass-req {
+
+  &__certific {
+    margin-bottom: 12px;
+
+    p {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__title-section {
+    margin-bottom: 10px;
+  }
+
+  &__one {
+
+    p {
+      margin-bottom: 7px;
+
+      b {
+        font-size: 13px;
+      }
+
+      &:not(:first-of-type) {
+        padding-top: 7px;
+        border-top: 1px solid $c-hr-lite-grey;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__two {
+
+    p {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+  }
+
+  &__three {
+    ul {
+      padding-top: 3px;
+      margin-bottom: 15px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 7px;
+      list-style-type: disc;
+    }
+  }
+}
