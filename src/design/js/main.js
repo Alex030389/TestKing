@@ -146,10 +146,10 @@ $('.b-block__link').on('click', function() {
 
 
 // ======================================================== add cart purchase
-$('.purchase__add-to-cart').on('click', function () {
-  $(this).closest('.purchase__box-add-to-cart').find('.purchase__wrap-response').fadeIn();
-  $(this).hide();
-});
+// $('.purchase__add-to-cart').on('click', function () {
+//   $(this).closest('.purchase__box-add-to-cart').find('.purchase__wrap-response').fadeIn();
+//   $(this).hide();
+// });
 
 
 // ========================================================== slick
@@ -357,7 +357,7 @@ $('[data-mfp-src="#modal-details"]').magnificPopup({
   // modal: true,
   alignTop: true,
   showCloseBtn: false
-})
+});
 
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
@@ -388,7 +388,7 @@ $(window).scroll(function () {
     // $('.up').fadeIn();
     $('.up').css({"transform": "translateX(0)"});
   } else {
-    $('.up').css({"transform": "translateX(100px)"});;
+    $('.up').css({"transform": "translateX(100px)"});
   }
 });
 
@@ -401,13 +401,13 @@ $('.up').on('click', function () {
 
 // ============================================================ footer
 (function () {
-  var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+  let isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
-  var stickFooter = function () {
-    var FOOTER = document.querySelector('footer');
-    var MAIN = document.querySelector('main');
-    var BODY = document.querySelector('body');
-    var footerHeight = FOOTER.offsetHeight;
+  let stickFooter = function () {
+    let FOOTER = document.querySelector('footer');
+    let MAIN = document.querySelector('main');
+    let BODY = document.querySelector('body');
+    let footerHeight = FOOTER.offsetHeight;
     BODY.style.position = 'relative';
     MAIN.style.marginBottom = footerHeight + 'px';
     FOOTER.style.position = 'absolute';

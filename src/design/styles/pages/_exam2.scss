@@ -39,6 +39,10 @@
     position: relative;
     width: 297px;
 
+    img {
+      margin: 0 auto;
+    }
+
     @media (max-width: $md) {
       right: 10px;
     }
@@ -47,10 +51,11 @@
   &__img-price {
     position: absolute;
     top: 182px;
-    right: 60px;
+    right: 80px;
     color: #fff;
     font-size: 18px;
-    width: 74px;
+    font-weight: 700;
+    width: 80px;
     text-align: center;
   }
 
@@ -102,6 +107,12 @@
     font-size: 16px;
     padding-top: 3px;
     margin-bottom: 3px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__subtitle {
@@ -142,10 +153,11 @@
     display: flex;
 
     @media (max-width: $lg) {
-      justify-content: space-around;
-      max-width: 700px;
-      margin: 0 auto;
       flex-wrap: wrap;
+    }
+
+    @media (max-width: $xsm) {
+      justify-content: center;
     }
   }
 
@@ -157,7 +169,7 @@
     display: flex;
     position: relative;
 
-    &:nth-child(-n + 3)::after {
+    &:not(:last-child)::after {
       content: "";
       position: absolute;
       right: -14px;
@@ -191,6 +203,12 @@
     color: $c-title-dark;
     line-height: 1.3;
     margin-bottom: 9px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__desc {
