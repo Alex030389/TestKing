@@ -1,0 +1,32 @@
+.box-examdata-examguarant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.exam3 {
+
+  &__data {
+    line-height: 1.4;
+    margin-right: 30px;
+
+    @media (max-width: $md) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__exam-guarant {
+    flex-shrink: 0;
+  }
+}

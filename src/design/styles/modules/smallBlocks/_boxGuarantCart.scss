@@ -16,7 +16,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: 30px;
 
   &__img {
     flex-shrink: 0;
@@ -61,10 +60,6 @@
     small {
       font-size: 11px;
     }
-  }
-
-  @media (max-width: $sm) {
-    margin-right: 0;
   }
 }
 

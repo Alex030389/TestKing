@@ -359,6 +359,14 @@ $('[data-mfp-src="#modal-details"]').magnificPopup({
   showCloseBtn: false
 });
 
+
+$('[data-mfp-src="#modal-details-2"]').magnificPopup({
+  type: 'inline',
+  // modal: true,
+  alignTop: true,
+  showCloseBtn: false
+});
+
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
 const maHome = document.querySelectorAll('.ma-home');

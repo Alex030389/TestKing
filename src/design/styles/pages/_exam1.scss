@@ -47,6 +47,14 @@
     }
   }
 
+  &__exam-guarant {
+    margin-right: 30px;
+
+    @media (max-width: $sm) {
+      margin-right: 0;
+    }
+  }
+
   &__content {
     max-width: 750px;
     font-size: 13px;
