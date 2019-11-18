@@ -1,0 +1,19 @@
+.exam4 {
+
+  &__wrap-tab-box {
+    margin-bottom: 40px;
+  }
+
+
+}
+
+.exam4-box {
+
+  &__first {
+    margin-right: 30px;
+
+    @media (max-width: $md) {
+      margin-right: 0;
+    }
+  }
+}
