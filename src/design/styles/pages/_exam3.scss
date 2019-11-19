@@ -15,18 +15,32 @@
   &__data {
     line-height: 1.4;
     margin-right: 30px;
+    max-width: 320px;
+    width: 100%;
 
     @media (max-width: $md) {
       margin-right: 0;
       margin-bottom: 20px;
+      max-width: 100%;
     }
 
     p {
       margin-bottom: 0;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
+
   &__exam-guarant {
     flex-shrink: 0;
+  }
+
+  &__title-box {
+
   }
 }

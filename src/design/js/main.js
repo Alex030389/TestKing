@@ -131,6 +131,10 @@ $('.tab__btn').on('click', function () {
 
   $('.tab-content__item').hide();
   $('.tab-content__item').eq(id).fadeIn();
+
+  if($('.tab-content__item').eq(id).find('.slider-v2__list').length == 1) {
+    $('.slider-v2__list').slick('slickSetOption', 'adaptiveHeight', true, true);
+  }
 });
 
 // ======================================================== testimonials
@@ -286,6 +290,9 @@ function changePrice() {
 }
 
 // ========================================== test magnific-popup
+
+
+
 $('.slider-v2__list').magnificPopup({
   delegate: 'a',
   type: 'image',
