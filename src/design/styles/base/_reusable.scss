@@ -20,6 +20,12 @@
   text-decoration: underline;
 }
 
+.hov-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 //colors
 .blue {
   color: $c-link-dark;
