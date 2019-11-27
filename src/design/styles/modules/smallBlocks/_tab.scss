@@ -4,7 +4,6 @@
 
 .tab {
   display: flex;
-  z-index: 10;
 
   @media (max-width: $sm) {
     overflow-x: auto;
@@ -20,6 +19,9 @@
     border-right: 1px solid #F2F3F4;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    z-index: 1;
+    position: relative;
+
 
     &:not(:last-child) {
       margin-right: 2px;
@@ -28,7 +30,6 @@
     &.active {
       background-color: #fff;
       border-color: #c9c9c9;
-      position: relative;
       bottom: -1px;
       padding: 11px 15px 11px;
     }

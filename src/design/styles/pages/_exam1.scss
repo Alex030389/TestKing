@@ -96,6 +96,10 @@
     display: flex;
     align-items: center;
 
+    @media (max-width: 445px) {
+      margin-bottom: 10px;
+    }
+
     label {
       user-select: none;
       line-height: 1.6;
