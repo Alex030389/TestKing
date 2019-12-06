@@ -138,7 +138,7 @@ $('.tab__btn').on('click', function () {
 });
 
 // ======================================================== testimonials
-$('.b-block__link').on('click', function() {
+$('.b-block__link-view-all').on('click', function() {
   if($(this).text() === 'View All') {
     $(this).text('Hide All');
     $('.b-feedbacks__item').slideDown();
@@ -225,12 +225,22 @@ $('.slider-v2__btn.__next').on('click', function () {
 });
 
 // ================================================================= tab-exam2__more
-$('.tab-exam2__more').on('click', function () {
+// $('.tab-exam2__more').on('click', function () {
+//   if ($(this).text() == 'More...') {
+//     $('.tab-exam2__desc-p').fadeIn();
+//     $(this).text('Close');
+//   } else {
+//     $('.tab-exam2__desc-p').hide();
+//     $(this).text('More...');
+//   }
+// });
+
+$('.exam-more').on('click', function () {
   if ($(this).text() == 'More...') {
-    $('.tab-exam2__desc-p').fadeIn();
+    $('.text-more-hidden').fadeIn();
     $(this).text('Close');
   } else {
-    $('.tab-exam2__desc-p').hide();
+    $('.text-more-hidden').hide();
     $(this).text('More...');
   }
 });
@@ -374,6 +384,13 @@ $('[data-mfp-src="#modal-details-2"]').magnificPopup({
   showCloseBtn: false
 });
 
+$('[data-mfp-src="#modal-details-3"]').magnificPopup({
+  type: 'inline',
+  // modal: true,
+  alignTop: true,
+  showCloseBtn: false
+});
+
 // ==================================================================== acc-nav
 const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
 const maHome = document.querySelectorAll('.ma-home');
@@ -396,6 +413,19 @@ if (accNavBtn.length > 1) {
     });
   }
 }
+
+
+// ================================================================= video list
+$('.video-level-1__header').on('click', function () {
+  let videoLevel2 = $(this).next('.video-level-2');
+  if(videoLevel2.css('display') === 'none') {
+    videoLevel2.slideDown(150);
+    $(this).addClass('_active');
+  } else {
+    videoLevel2.slideUp(150);
+    $(this).removeClass('_active');
+  }
+});
 
 // ============================================================= up
 $(window).scroll(function () {

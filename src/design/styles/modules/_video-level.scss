@@ -1,0 +1,132 @@
+.video-level-1 {
+  font-size: 12px;
+
+  @media (max-width: $sm) {
+    margin: 0 -15px;
+  }
+
+  &__item {
+
+  }
+
+  &__header {
+    border: 1px solid #cdd7e2;
+    background-color: #e1ebf6;
+    padding: 14px 50px 12px 31px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+
+    @media (max-width: $lg) {
+      padding-right: 15px;
+    }
+
+    &:after {
+      content: "+";
+      position: absolute;
+      top: 11px;
+      left: 15px;
+      font-size: 16px;
+      color: #1376d7;
+      font-weight: 700;
+    }
+
+    &._active {
+      &:after {
+        content: "-";
+        top: 9px;
+      }
+    }
+
+    & > *:not(:last-child) {
+      padding-right: 10px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__count {
+    text-align: center;
+    margin-left: auto;
+    min-width: 65px;
+    margin-right: 40px;
+
+    @media (max-width: $lg) {
+      margin-right: 0;
+    }
+  }
+
+  &__duration {
+    text-align: center;
+    min-width: 50px;
+  }
+
+}
+
+.video-level-2 {
+  padding-left: 25px;
+  display: none;
+
+  @media (max-width: $sm) {
+    padding-left: 10px;
+  }
+
+  &._active {
+    display: block;
+  }
+
+  &__item {
+  }
+
+  &__header {
+    margin-bottom: 5px;
+    border: 1px solid #d9e3ee;
+    padding: 14px 50px 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(225, 235, 246, 0.4) url("/design/images/lock.svg") 11px center no-repeat;
+    background-size: 12px;
+
+    @media (max-width: $lg) {
+      padding-right: 15px;
+    }
+
+    & > *:not(:last-child) {
+      padding-right: 10px;
+    }
+
+    &._open {
+      cursor: pointer;
+      background-image: url("/design/images/play.svg");
+    }
+  }
+
+  &__title {
+    padding-left: 13px;
+  }
+
+  &__duration {
+    text-align: center;
+    min-width: 50px;
+  }
+}
+
+.video-level-3 {
+  padding-left: 25px;
+  //display: none;
+
+  @media (max-width: $sm) {
+    padding-left: 10px;
+  }
+
+  &__item {
+    border: 1px solid #e2ecf7;
+    padding: 14px 15px 12px 28px;
+    margin-bottom: 5px;
+    background: url("/design/images/download.svg") 11px center no-repeat;
+    background-size: 12px 12px;
+  }
+}

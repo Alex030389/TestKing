@@ -1,0 +1,70 @@
+.exam6-data {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 9px;
+}
+
+.exam6 {
+
+  &__top {
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 200px;
+    position: relative;
+    margin-top: 15px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img-price {
+    font-size: 14px ;
+    top: 170px;
+    right: 0px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    @media (max-width: $xsm) {
+      justify-content: center;
+    }
+  }
+
+  &__add-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 120px;
+
+    & > div {
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+
+  &__old-price {
+    color: #1f63b1;
+    font-size: 13px;
+
+    span {
+      text-decoration: line-through;
+    }
+  }
+
+  &__new-price {
+    color: $c-red;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__btn {
+    white-space: nowrap;
+    padding: 8px 15px;
+  }
+}
