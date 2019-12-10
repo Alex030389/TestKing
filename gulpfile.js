@@ -201,10 +201,10 @@ gulp.task('default', gulp.series(
     'fonts',
     'css:libs',
     'css',
-    // 'css:host',
+    'css:host',
     'js:libs',
     'js',
-    // 'js:host',
+    'js:host',
     'watch',
     'browser-sync'
   )));

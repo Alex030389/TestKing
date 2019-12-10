@@ -6,6 +6,7 @@
     width: 309px;
     flex-shrink: 0;
     align-self: flex-start;
+    margin-right: 10px;
 
     .h1 {
       padding-left: 9px;
@@ -18,8 +19,7 @@
   }
 
   &__second {
-    flex-grow: 1;
-    width: 100%;
+    width: calc(100% - 319px);
 
     @media (max-width: $md) {
       width: 100%;
@@ -33,7 +33,6 @@
 
 
 .exam2 {
-  margin-right: 10px;
 
   &__img {
     margin: 0 auto 12px;
