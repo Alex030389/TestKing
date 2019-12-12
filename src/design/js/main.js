@@ -392,27 +392,27 @@ $('[data-mfp-src="#modal-details-3"]').magnificPopup({
 });
 
 // ==================================================================== acc-nav
-const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
-const maHome = document.querySelectorAll('.ma-home');
-
-if (accNavBtn.length > 1) {
-  for (let i = 0; i < accNavBtn.length; i++) {
-    accNavBtn[i].addEventListener('click', function (e) {
-
-      const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
-      accNavItemCurrent.classList.remove('_current');
-      e.target.parentElement.classList.add('_current');
-
-      if (+e.target.getAttribute('data-id') === 0) {
-        maHome[0].classList.remove('_expired-prod');
-        maHome[1].classList.add('_expired-prod');
-      } else {
-        maHome[1].classList.remove('_expired-prod');
-        maHome[0].classList.add('_expired-prod');
-      }
-    });
-  }
-}
+// const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
+// const maHome = document.querySelectorAll('.ma-home');
+//
+// if (accNavBtn.length > 1) {
+//   for (let i = 0; i < accNavBtn.length; i++) {
+//     accNavBtn[i].addEventListener('click', function (e) {
+//
+//       const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
+//       accNavItemCurrent.classList.remove('_current');
+//       e.target.parentElement.classList.add('_current');
+//
+//       if (+e.target.getAttribute('data-id') === 0) {
+//         maHome[0].classList.remove('_expired-prod');
+//         maHome[1].classList.add('_expired-prod');
+//       } else {
+//         maHome[1].classList.remove('_expired-prod');
+//         maHome[0].classList.add('_expired-prod');
+//       }
+//     });
+//   }
+// }
 
 
 // ================================================================= video list

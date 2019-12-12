@@ -20,7 +20,7 @@
   }
 
   &__form-list {
-
+    max-width: 340px;
   }
 
   &__form-item-checkbox {
@@ -48,5 +48,11 @@
     }
   }
 
-  
+  &__box-btn {
+    text-align: right;
+  }
+
+  &__btn {
+    padding: 7px 30px;
+  }
 }
