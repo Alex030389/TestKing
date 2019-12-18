@@ -100,11 +100,21 @@
     color: red;
   }
 
-  &__promotion-code {
-    margin-bottom: 20px;
+  &__discount-code-text {
+    color: red;
+    text-align: right;
+    padding: 10px 0;
+
+    @media (max-width: $xsm) {
+      text-align: center;
+    }
   }
 
-  &__promotion-form {
+  &__discount-code {
+    margin-bottom: 5px;
+  }
+
+  &__discount-form {
     background-color: #f1f7fc;
     max-width: 342px;
     margin-left: auto;
@@ -118,10 +128,11 @@
     }
   }
 
-  &__promotion-label {
+  &__discount-label {
+    margin-right: 8px;
 
     span {
-      margin-right: 5px;
+      margin-right: 10px;
 
       @media (max-width: $xsm) {
         display: inline-block;
@@ -130,22 +141,14 @@
     }
   }
 
-  &__promotion-input {
+  &__discount-input {
     width: 130px;
-    margin-right: 5px;
     padding: 2px 3px;
   }
 
-  &__promotion-btn {
-  }
-
-  &__total {
-    text-align: right;
-    color: #2e5eb6;
-    font-size: 24px;
-    font-weight: 700;
-    padding-right: 10px;
-    margin-bottom: 12px;
+  &__discount-btn {
+    padding: 5px 18px;
+    font-size: 11px;
   }
 
   &__box-info {
@@ -173,6 +176,31 @@
 
   &__continue {
     display: inline-block;
+    margin-bottom: 12px;
+  }
+}
+
+#scFooter {
+  padding-top: 5px;
+  text-align: right;
+  font-weight: 700;
+
+  .promotext {
+    color: green;
+    margin-bottom: 10px;
+  }
+
+  .subprice {
+    color: #2e5eb6;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .ordprice {
+    color: #2e5eb6;
+    font-size: 24px;
+    padding-right: 10px;
+    margin-top: 10px;
     margin-bottom: 12px;
   }
 }

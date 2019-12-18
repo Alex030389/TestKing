@@ -102,7 +102,9 @@ gulp.task('js:libs', function () {
       // 'node_modules/svg4everybody/dist/svg4everybody.min.js',
       // 'node_modules/selectric/public/jquery.selectric.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+      'node_modules/plyr/dist/plyr.polyfilled.min.js',
+      'node_modules/plyr/dist/plyr.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

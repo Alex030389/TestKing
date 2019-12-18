@@ -1,0 +1,59 @@
+.inv {
+
+  &__data {
+    margin-bottom: 20px;
+
+    td {
+      padding-bottom: 5px;
+      vertical-align: top;
+
+      &:first-child {
+        padding-right: 8px;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+
+    th, td {
+      padding: 7px 10px 6px 10px;
+      border: 1px solid #c9c9c9;
+    }
+
+    th {
+      background-color: #eaf3fd;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+
+    td {
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__td-right {
+    b {
+      display: block;
+      width: 90px;
+      margin-left: auto;
+    }
+  }
+
+  &__thank {
+    font-size: 14px;
+    padding: 15px 15px 20px 15px;
+    text-align: center;
+  }
+
+  &__footer {
+    background-color: #eaf3fd;
+    text-align: center;
+    padding: 20px;
+  }
+}

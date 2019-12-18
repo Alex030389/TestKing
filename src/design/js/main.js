@@ -225,16 +225,6 @@ $('.slider-v2__btn.__next').on('click', function () {
 });
 
 // ================================================================= tab-exam2__more
-// $('.tab-exam2__more').on('click', function () {
-//   if ($(this).text() == 'More...') {
-//     $('.tab-exam2__desc-p').fadeIn();
-//     $(this).text('Close');
-//   } else {
-//     $('.tab-exam2__desc-p').hide();
-//     $(this).text('More...');
-//   }
-// });
-
 $('.exam-more').on('click', function () {
   if ($(this).text() == 'More...') {
     $('.text-more-hidden').fadeIn();
@@ -258,46 +248,6 @@ $('.ma-home__additional-btn.hide').on('click', function () {
   $('.ma-home__upgr').hide();
 });
 
-// =============================================================== upgrade
-const upgrInput = document.querySelectorAll('.ma-home__upgr-input');
-
-if (upgrInput.length) {
-  changePrice();
-}
-
-
-for (let i = 0; i < upgrInput.length; i++) {
-  upgrInput[i].addEventListener('change', function () {
-    changePrice();
-  })
-}
-
-function changePrice() {
-  const upgInputChecked = document.querySelectorAll('.ma-home__upgr-input:checked');
-  const numChecked = upgInputChecked.length;
-  const itemToSave = document.querySelector('.ma-home__upgr-save span');
-  const promotionalDiscount = document.querySelector('.ma-home__upgr-remain-right span');
-  const total = document.querySelector('.ma-home__upgr-total span');
-  const newTotalProcent = document.querySelector('.ma-home__upgr-new-total span:first-child');
-  const newTotal = document.querySelector('.ma-home__upgr-new-total span:last-child');
-
-  const procent = 10 * numChecked;
-
-  let totalAmount = 0;
-
-  for (let i = 0; i < upgInputChecked.length; i++) {
-    totalAmount += +upgInputChecked[i].getAttribute('data-price')
-  }
-
-  let a = totalAmount / 100 * procent;
-  a = totalAmount - a;
-
-  itemToSave.textContent = 10 + procent;
-  promotionalDiscount.textContent = procent;
-  newTotalProcent.textContent = procent;
-  total.textContent = totalAmount.toFixed(2);
-  newTotal.textContent = a.toFixed(2);
-}
 
 // ========================================== test magnific-popup
 
@@ -391,30 +341,6 @@ $('[data-mfp-src="#modal-details-3"]').magnificPopup({
   showCloseBtn: false
 });
 
-// ==================================================================== acc-nav
-// const accNavBtn = document.querySelectorAll('.acc-nav__item-2 button');
-// const maHome = document.querySelectorAll('.ma-home');
-//
-// if (accNavBtn.length > 1) {
-//   for (let i = 0; i < accNavBtn.length; i++) {
-//     accNavBtn[i].addEventListener('click', function (e) {
-//
-//       const accNavItemCurrent = document.querySelector('.acc-nav__item-2._current');
-//       accNavItemCurrent.classList.remove('_current');
-//       e.target.parentElement.classList.add('_current');
-//
-//       if (+e.target.getAttribute('data-id') === 0) {
-//         maHome[0].classList.remove('_expired-prod');
-//         maHome[1].classList.add('_expired-prod');
-//       } else {
-//         maHome[1].classList.remove('_expired-prod');
-//         maHome[0].classList.add('_expired-prod');
-//       }
-//     });
-//   }
-// }
-
-
 // ================================================================= video list
 $('.video-level-1__header').on('click', function () {
   let videoLevel2 = $(this).next('.video-level-2');
@@ -427,21 +353,119 @@ $('.video-level-1__header').on('click', function () {
   }
 });
 
+
 // =============================================================== video player
-let videoLevel1 = document.querySelector('.video-level-1');
+let videoLevel2 = document.querySelectorAll('.video-level-2');
 
-if (videoLevel1) {
-  videoLevel1.addEventListener('click', function(e) {
-    if(e.target.closest('.video-level-2__header')) {
 
-      let video = e.target.closest('.video-level-2__header');
-      let videoArr = video.closest('.video-level-2').querySelectorAll('.video-level-2__header');
+for (let i = 0; i < videoLevel2.length; i++) {
+  videoLevel2[i].addEventListener('click', function(event) {
+    let videoLevel2Headers = this.querySelectorAll('.video-level-2__header._open');
+    let currentElement = event.target;
+    let indexCurrentElement = Number(currentElement.getAttribute('data-index'));
 
-    }
+    openPlayer(makeVideoList(videoLevel2Headers), indexCurrentElement);
   })
 }
 
-const player = new Plyr('#player');
+function makeVideoList(videoLevel2Headers) {
+  let videoList = [];
+
+  for (let i = 0; i < videoLevel2Headers.length; i++) {
+    let id = videoLevel2Headers[i].getAttribute('id');
+    let title = videoLevel2Headers[i].getAttribute('data-title');
+    videoList.push(new Object({id: id, title: title}))
+  }
+  return videoList;
+}
+
+
+function openPlayer(videoList, index) {
+
+  const player = new Plyr('#player', {
+    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen']
+  });
+
+  $.magnificPopup.open({
+    items: {
+      src: '#video-popup'
+    },
+    // closeBtnInside: false,
+    type: 'inline',
+    callbacks: {
+      beforeClose: function() {
+        player.destroy();
+      }
+    }
+  }, 0);
+
+
+  let videoPlayer = document.querySelector('#player');
+
+  let plyrControls = document.querySelector('.plyr__controls');
+  let plyrControl = document.querySelector('.plyr__control');
+
+  plyrControls.insertAdjacentHTML('afterbegin', '<div class="player-title"></div>');
+  let videoTitle = document.querySelector('.player-title');
+
+  plyrControl.insertAdjacentHTML('beforebegin', '<button type="button" class="plyr-prev"></button>');
+  plyrControl.insertAdjacentHTML('afterend', '<button type="button" class="plyr-next"></button>');
+
+  let plyrPrev = document.querySelector('.plyr-prev');
+  let plyrNext = document.querySelector('.plyr-next');
+
+
+  let source = videoPath + videoList[index].id;
+
+  videoPlayer.setAttribute('src', source);
+  videoTitle.innerHTML = videoList[index].title;
+
+  checkButtons(videoList, index);
+
+
+  plyrPrev.addEventListener('click', function() {
+    index--;
+
+    source = videoPath + videoList[index].id;
+
+    videoPlayer.setAttribute('src', source);
+
+    videoTitle.innerHTML = videoList[index].title;
+
+    checkButtons(videoList, index);
+  });
+
+  plyrNext.addEventListener('click', function() {
+    index++;
+
+    source = videoPath + videoList[index].id;
+
+    videoPlayer.setAttribute('src', source);
+
+    videoTitle.innerHTML = videoList[index].title;
+
+    checkButtons(videoList, index);
+  });
+
+
+  function checkButtons(videoList, index) {
+    if (index === 0) {
+      plyrPrev.setAttribute('disabled', 'disabled');
+    } else {
+      plyrPrev.removeAttribute('disabled');
+
+    }
+    if (index === videoList.length - 1) {
+      plyrNext.setAttribute('disabled', 'disabled');
+    } else {
+      plyrNext.removeAttribute('disabled');
+    }
+  }
+}
+
+
+
+
 
 
 // ============================================================= up
@@ -459,8 +483,6 @@ $('.up').on('click', function () {
     scrollTop: 0
   }, 500);
 });
-
-
 
 
 // ============================================================ footer

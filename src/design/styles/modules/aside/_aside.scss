@@ -258,6 +258,14 @@
       background-color: rgb(231, 231, 231);
       z-index: 0;
     }
+
+    &._border-hide {
+      margin-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__title {
