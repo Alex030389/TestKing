@@ -1,0 +1,18 @@
+.paynow {
+  &__btn-opt-2 {
+    padding: 5px 10px;
+    width: 120px;
+    margin-bottom: 15px;
+  }
+}
+
+.paynow-steps {
+
+  &__item {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $c-hr-lite-grey;
+      margin-bottom: 15px;
+    }
+  }
+}

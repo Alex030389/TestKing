@@ -49,6 +49,7 @@
 @import "pages/mega-packs";
 @import "pages/cart";
 @import "pages/checkout";
+@import "pages/paynow";
 @import "pages/request-exam";
 @import "pages/corporate";
 @import "pages/faq";
@@ -80,6 +81,9 @@
 //modal
 @import "modules/modal/modal";
 @import "modules/modal/modal-d";
+@import "modules/modal/checkouthelp";
+@import "modules/modal/cvv";
+
 
 
 // plagins

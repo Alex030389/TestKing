@@ -7,6 +7,10 @@
   &__item {
     font-size: 10px;
     color: #898989;
+
+    a {
+      color: $c-link-dark;
+    }
   }
 
   &__item:not(:last-child) {
@@ -29,6 +33,4 @@
   &__link {
     color: #226cb1;
   }
-
-
 }

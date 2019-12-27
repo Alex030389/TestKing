@@ -463,10 +463,29 @@ function openPlayer(videoList, index) {
   }
 }
 
+//======================================= checkouthelp
+let checkoutHelpList = document.querySelector('.checkouthelp__list');
+let checkoutHelpDescArr = document.querySelectorAll('.checkouthelp__desc');
+
+if(checkoutHelpList) {
+  checkoutHelpList.addEventListener('click', function (e) {
+    if(e.target.classList.contains('checkouthelp__btn')) {
+      e.target.nextElementSibling.classList.toggle('_show');
+    }
+  })
+}
 
 
+$('.checkouthelp-link').magnificPopup({
+  type:'inline',
+  alignTop: true
+});
 
 
+$('[data-mfp-src="#cvv-modal"]').magnificPopup({
+  type:'inline',
+  alignTop: true
+});
 
 // ============================================================= up
 $(window).scroll(function () {

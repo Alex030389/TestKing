@@ -110,6 +110,32 @@
     }
   }
 
+  &__discount-box {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__discount-left {
+    margin-right: 20px;
+    color: #009900;
+    font-size: 16px;
+    line-height:20px;
+
+    @media (max-width: $md) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &____discount-right {
+
+  }
+
   &__discount-code {
     margin-bottom: 5px;
   }
