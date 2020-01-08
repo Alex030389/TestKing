@@ -5,27 +5,20 @@ let body = document.querySelector('body');
 $(window).resize(function () {
 
   if ($('.header__search').css('display') !== 'none') {
+    $('.header__m-search').closest('.header__wrap-m-box').removeClass('active');
     $('.header__m-search').closest('.header__wrap-m-box').hide();
     if ($('.header__m-box-nav').closest('.header__wrap-m-box').css('display') === 'none') {
-      body.style.overflowY = 'auto';
+      $('body').removeClass('no-scroll');
     }
   }
 
   if ($('.header__box-nav').css('display') !== 'none') {
+    $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active')
     $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
-    body.style.overflowY = 'auto';
+    $('body').removeClass('no-scroll');
   }
 
 });
-
-// =============================================== smooth scroll
-// var $page = $('html, body');
-// $('a[href*="#"]').click(function () {
-//   $page.animate({
-//     scrollTop: $($.attr(this, 'href')).offset().top
-//   }, 400);
-//   return false;
-// });
 
 // =============================================== select link
 const searchCertificSelect = document.querySelector('.search-certifications__select select');
@@ -40,26 +33,44 @@ if (searchCertificSelect) {
 // =============================================== header nav
 $('.js.header__hamburger').click(function () {
 
-  $('.header__m-search').closest('.header__wrap-m-box').hide();
+  $('.header__m-search').closest('.header__wrap-m-box').removeClass('active');
+  $('.header__m-search').closest('.header__wrap-m-box').css('display', 'none');
+
 
   if ($('.header__m-box-nav').closest('.header__wrap-m-box').css('display') === 'none') {
-    $('.header__m-box-nav').closest('.header__wrap-m-box').slideDown();
-    body.style.overflowY = 'hidden';
+    $('body').addClass('no-scroll');
+    $('.header__m-box-nav').closest('.header__wrap-m-box').show();
+    setTimeout(function() {
+      $('.header__m-box-nav').closest('.header__wrap-m-box').addClass('active');
+    }, 100);
   } else {
-    $('.header__m-box-nav').closest('.header__wrap-m-box').slideUp();
-    body.style.overflowY = 'auto';
+    $('body').removeClass('no-scroll');
+    $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active');
+    setTimeout(function() {
+      $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
+    }, 300)
   }
 });
 
 $('.js.search__btn').click(function () {
+
+  $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active');
   $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
 
+
   if ($('.header__m-search').closest('.header__wrap-m-box').css('display') === 'none') {
-    $('.header__m-search').closest('.header__wrap-m-box').slideDown();
-    $('body').css("overflow-y", "hidden");
+    $('body').addClass('no-scroll');
+    $('.header__m-search').closest('.header__wrap-m-box').css('display', 'block');
+    setTimeout(function() {
+      $('.header__m-search').closest('.header__wrap-m-box').addClass('active');
+      $('.header__m-search').find('.search__input').focus();
+    }, 100)
   } else {
-    $('.header__m-search').closest('.header__wrap-m-box').slideUp();
-    body.style.overflowY = 'auto';
+    $('body').removeClass('no-scroll');
+    $('.header__m-search').closest('.header__wrap-m-box').removeClass('active');
+    setTimeout(function() {
+      $('.header__m-search').closest('.header__wrap-m-box').css('display', 'none');
+    }, 300);
   }
 });
 
@@ -118,6 +129,12 @@ $('.user-nav__link._right').on('click', function() {
   if($('.user-nav__sub-n._reg').css('display') == 'none') {
     $('.user-nav__sub-n._reg').slideDown(200);
   } else {
+    $('.user-nav__sub-n._reg').slideUp(200);
+  }
+});
+
+$('body').mouseup(function(even) {
+  if($('.user-nav__sub-n').has(even.target).length === 0) {
     $('.user-nav__sub-n._reg').slideUp(200);
   }
 });
@@ -185,6 +202,12 @@ $('.slider-v2__list').slick({
   slidesToShow: 4,
   infinite: false,
 });
+
+
+// $('.slider-v3__list').slick({
+//   slidesToShow: 2,
+//   infinite: false,
+// });
 
 checkDisabledArrow();
 
