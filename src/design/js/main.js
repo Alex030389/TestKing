@@ -13,7 +13,8 @@ $(window).resize(function () {
   }
 
   if ($('.header__box-nav').css('display') !== 'none') {
-    $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active')
+    $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active');
+    $('.js.header__hamburger').removeClass('close');
     $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
     $('body').removeClass('no-scroll');
   }
@@ -39,12 +40,14 @@ $('.js.header__hamburger').click(function () {
 
   if ($('.header__m-box-nav').closest('.header__wrap-m-box').css('display') === 'none') {
     $('body').addClass('no-scroll');
+    $('.js.header__hamburger').addClass('close');
     $('.header__m-box-nav').closest('.header__wrap-m-box').show();
     setTimeout(function() {
       $('.header__m-box-nav').closest('.header__wrap-m-box').addClass('active');
-    }, 100);
+    }, 50);
   } else {
     $('body').removeClass('no-scroll');
+    $('.js.header__hamburger').removeClass('close');
     $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active');
     setTimeout(function() {
       $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
@@ -55,21 +58,24 @@ $('.js.header__hamburger').click(function () {
 $('.js.search__btn').click(function () {
 
   $('.header__m-box-nav').closest('.header__wrap-m-box').removeClass('active');
+  $('.js.header__hamburger').removeClass('close');
   $('.header__m-box-nav').closest('.header__wrap-m-box').hide();
 
 
   if ($('.header__m-search').closest('.header__wrap-m-box').css('display') === 'none') {
     $('body').addClass('no-scroll');
-    $('.header__m-search').closest('.header__wrap-m-box').css('display', 'block');
+    $('.header__m-search').closest('.header__wrap-m-box').show();
+    $('#m-search__input').focus();
+
     setTimeout(function() {
       $('.header__m-search').closest('.header__wrap-m-box').addClass('active');
-      $('.header__m-search').find('.search__input').focus();
-    }, 100)
+    }, 50)
+
   } else {
     $('body').removeClass('no-scroll');
     $('.header__m-search').closest('.header__wrap-m-box').removeClass('active');
     setTimeout(function() {
-      $('.header__m-search').closest('.header__wrap-m-box').css('display', 'none');
+      $('.header__m-search').closest('.header__wrap-m-box').hide();
     }, 300);
   }
 });

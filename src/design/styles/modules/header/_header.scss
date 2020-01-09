@@ -102,8 +102,17 @@
       height: 16px;
       margin-left: -9px;
       margin-top: -7px;
-      background: url(../images/icon/hamburger.png) center center no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../images/icon/hamburger.png);
+
       // background-size: 10;
+    }
+
+    &.close {
+      &::after {
+        background-image: url(../images/icon/hamburger-close.png);
+      }
     }
   }
 
@@ -532,6 +541,46 @@
 
   &__item {
     margin-bottom: 16px;
+    padding-left: 30px;
+    background-position: left 0;
+    background-repeat: no-repeat;
+    background-size: 15px;
+
+    &.home {
+      background-image: url("../images/icon/m-menu/home.png");
+    }
+
+    &.products {
+      background-image: url("../images/icon/m-menu/products.png");
+    }
+
+    &.packs {
+      background-image: url("../images/icon/m-menu/packs.png");
+    }
+
+    &.request {
+      background-image: url("../images/icon/m-menu/request.png");
+    }
+
+    &.corporate {
+      background-image: url("../images/icon/m-menu/corporate.png");
+    }
+
+    &.faq {
+      background-image: url("../images/icon/m-menu/faq.png");
+    }
+
+    &.account {
+      background-image: url("../images/icon/m-menu/account.png");
+    }
+
+    &.cart {
+      background-image: url("../images/icon/m-menu/cart.png");
+    }
+
+    &.log-in {
+      background-image: url("../images/icon/m-menu/log-out.png");
+    }
   }
 
   &__link {
