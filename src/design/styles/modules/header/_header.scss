@@ -26,15 +26,15 @@
     justify-content: space-between;
     z-index: 10;
     margin-bottom: 5px;
-
-    @media (max-width: 870px) {
-      justify-content: flex-start;
-    }
   }
 
   &__logo {
     width: 249px;
     margin-left: 5px;
+
+    @media (max-width: 870px) {
+      margin-left: 0;
+    }
 
     @media (max-width: $sm) {
       width: 185px;
@@ -46,12 +46,6 @@
     left: -60px;
 
     @media (max-width: 870px) {
-      margin-right: 15px;
-      margin-left: auto;
-      left: 0;
-    }
-
-    @media (max-width: $sm) {
       display: none !important;
     }
   }
@@ -63,23 +57,30 @@
     @media (max-width: 870px) {
       display: none;
     }
+
+    &._visible {
+      display: block;
+
+      @media (max-width: $sm) {
+        width: 80px;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__box-search-btn {
     display: flex;
     align-items: center;
     padding-bottom: 8px;
+    margin-left: 15px;
     margin-right: 15px;
-
-    @media (max-width: $sm) {
-      margin-left: auto;
-    }
   }
 
   &__box-hamburger {
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding-bottom: 10px;
 
     @media (max-width: $sm) {
@@ -127,7 +128,6 @@
   &__box-nav-wrap {
     padding: 0;
     display: flex;
-    // justify-content: space-between;
     position: relative;
     width: 100%;
 
@@ -152,18 +152,48 @@
     z-index: 1;
   }
 
+  &__nav-overlay {
+    position: fixed;
+    display: none;
+    top: 79px;
+    bottom: 0;
+    background: linear-gradient(to bottom, #384d87, #3874ac);
+    width: 100%;
+    z-index: 800;
+
+    @media (max-width: $sm) {
+      top: 64px;
+    }
+  }
+
   &__wrap-m-box {
     position: fixed;
     display: none;
     top: 79px;
     bottom: 0;
-    background: linear-gradient(to bottom, #384d87, #3874ac, );
+    background: linear-gradient(to bottom, #384d87, #3874ac);
     width: 100%;
     padding: 30px 20px;
     overflow-y: auto;
     z-index: 1000;
-    transform: translateX(1000px);
-    transition: .3s;
+    transition: .2s linear;
+
+    &._search {
+      transform: translateX(870px);
+
+      @media (max-width: $sm) {
+        transform: translateX(580px);
+      }
+    }
+
+    &._nav {
+      transform: translateX(-870px);
+
+      @media (max-width: $sm) {
+        transform: translateX(-580px);
+      }
+    }
+
 
     &.active {
       transform: translateX(0);
@@ -175,8 +205,12 @@
   }
 
   &__m-box {
+    padding-left: 5px;
     display: flex;
-    justify-content: center;
+
+    &._center {
+      justify-content: center;
+    }
   }
 
 }

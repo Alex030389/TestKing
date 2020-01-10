@@ -1,5 +1,8 @@
 <header class="header">
   <div class="wrap header__top">
+    <div class="header__box-hamburger w870-show-flex">
+      <button class="js header__hamburger btn"></button>
+    </div>
     <div class="header__logo logo">
       <a href="/">
         <img src="/design/images/logo.png" alt="logo">
@@ -8,33 +11,30 @@
 
     <form action="#" class="header__search search">
       <input class="search__input" type="text" placeholder="Search">
-      <ul class="search__res" id="resSearch">
-        <li class="search__res-item">One</li>
-        <li class="search__res-item">Two</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-        <li class="search__res-item">Three</li>
-      </ul>
+      <!--<ul class="search__res" id="resSearch">-->
+      <!--  <li class="search__res-item">One</li>-->
+      <!--  <li class="search__res-item">Two</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--  <li class="search__res-item">Three</li>-->
+      <!--</ul>-->
       <button class="search__btn btn"></button>
     </form>
 
     <div class="header__mcafee mcafee">
       <img src="/design/images/mcafee.png" alt="mcAfee">
     </div>
-    <div class="header__box-search-btn sm-show-flex">
+    <div class="header__box-search-btn w870-show-flex">
       <button class="js search__btn btn"></button>
-    </div>
-    <div class="header__box-hamburger w870-show-flex">
-      <button class="js header__hamburger btn"></button>
     </div>
   </div>
   <!-- /header__top -->
@@ -370,8 +370,10 @@
     </div>
   </nav>
 
-  <div class="header__wrap-m-box">
-    <div class="header__m-box">
+  <div class="header__nav-overlay"></div>
+
+  <div class="header__wrap-m-box _search">
+    <div class="header__m-box _center">
       <form action="#" class="header__m-search search">
         <input class="search__input" type="text" placeholder="Search">
         <button class="search__btn-mobile btn">search</button>
@@ -379,7 +381,7 @@
     </div>
   </div>
 
-  <div class="header__wrap-m-box">
+  <div class="header__wrap-m-box _nav">
     <div class="header__m-box">
       <nav class="header__m-box-nav">
         <ul class="header__m-nav m-nav">
