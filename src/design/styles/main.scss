@@ -66,6 +66,9 @@
 @import "pages/partner";
 @import "pages/content";
 @import "pages/pass-req";
+@import "pages/new-release";
+@import "pages/mcreturn";
+@import "pages/promotion";
 @import "pages/404";
 
 // member_area
@@ -99,8 +102,15 @@
 
 @import "base/sizeScreenShowHide";
 
+[id^="addprod_"] a,
+[id^="addexamvp_"] a {
+  text-decoration: underline;
+}
+
 // якоря используются когда нужно увидеть место условия в шаблоне смарти.
+// при разработке поставить display: block
 .my-anchor {
-  display: none;
+  //display: none;
   color: red;
 }
+

@@ -211,9 +211,9 @@ gulp.task('img:build', function () {
 gulp.task('watch', function () {
   gulp.watch('src/pages/**/*.html', gulp.series('html'));
   gulp.watch('src/design/styles/**/*.scss', gulp.series('css'));
-  gulp.watch('src/design/styles/**/*.scss', gulp.series('css:build-host'));
+  // gulp.watch('src/design/styles/**/*.scss', gulp.series('css:build-host'));
   gulp.watch('src/design/js/**/*.js', gulp.series('js'));
-  gulp.watch('src/design/js/**/*.js', gulp.series('js:build-host'));
+  // gulp.watch('src/design/js/**/*.js', gulp.series('js:build-host'));
 });
 
 gulp.task('default', gulp.series(
@@ -224,10 +224,10 @@ gulp.task('default', gulp.series(
     'fonts',
     'css:libs',
     'css',
-    'css:build-host',
+    // 'css:build-host',
     'js:libs',
     'js',
-    'js:build-host',
+    // 'js:build-host',
     'watch',
     'browser-sync'
   )));
