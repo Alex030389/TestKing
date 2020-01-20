@@ -2,27 +2,36 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
     flex-direction: column;
   }
 
   &__box-img {
-    width: calc(50% - 30px);
-    margin-right: 30px;
+    margin: -12px 0 -15px -13px;
 
-    @media (max-width: $md) {
-      max-width: 490px;
+    @media (max-width: $lg) {
       width: 100%;
-      margin: 0 auto 15px;
+      max-width: 558px;
+      margin: 0 auto 20px;
+    }
+
+    @media (max-width: $sm) {
+      //margin: -12px
+
+      img {
+        margin: -12px -13px 0;
+        max-width: none;
+        width: 100%;
+      }
     }
   }
 
   &__box-form {
-    width: 50%;
+    max-width: 384px;
+    width: 100%;
+    flex-shrink: 0;
 
-    @media (max-width: $md) {
-      width: 100%;
-      max-width: 390px;
+    @media (max-width: $lg) {
       margin: 0 auto;
     }
 
@@ -37,7 +46,7 @@
 
   &__code {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     align-items: center;
 
     @media (max-width: $md) {
@@ -63,6 +72,7 @@
   }
 
   &__wrap-code-input {
+    max-width: 185px;
 
     &._small {
       max-width: 80px;
@@ -76,7 +86,7 @@
   &__code-input {
     border: 1px solid $c-hr-lite-grey;
     border-radius: 5px;
-    padding: 10px;
+    padding: 7px 10px;
     color: $c-title-light;
     font-size: 16px;
     font-weight: bold;
@@ -87,7 +97,7 @@
   &__code-valid {
     margin-left: 5px;
     font-style: italic;
-    white-space: nowrap;
+    text-align: center;
 
     @media (max-width: $xsm) {
       margin-left: 0;
@@ -119,7 +129,11 @@
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    flex-grow: 1;
+    width: calc(100% - 123px);
+
+    @media (max-width: $xsm) {
+      width: calc(100% - 80px);
+    }
 
     select {
       width: 100%;
@@ -134,11 +148,16 @@
   }
 
   &__form-box-second {
+    width: 103px;
 
+    @media (max-width: xsm) {
+      width: 80px;
+    }
   }
 
   &__btn {
     padding: 7px 25px;
+    width: 100%;
 
     @media (max-width: $xsm) {
       padding: 7px 15px;
