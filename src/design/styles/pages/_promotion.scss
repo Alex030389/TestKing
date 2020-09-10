@@ -150,7 +150,7 @@
   &__form-box-second {
     width: 103px;
 
-    @media (max-width: xsm) {
+    @media (max-width: $xsm) {
       width: 80px;
     }
   }

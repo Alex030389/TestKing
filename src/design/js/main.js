@@ -404,16 +404,18 @@ $('.video-level-1__header').on('click', function () {
 // =============================================================== video player
 let videoLevel2 = document.querySelectorAll('.video-level-2');
 
+if(document.querySelector('.video-level-2__header._open')) {
+  for (let i = 0; i < videoLevel2.length; i++) {
+    videoLevel2[i].addEventListener('click', function(event) {
+      let videoLevel2Headers = this.querySelectorAll('.video-level-2__header._open');
+      let currentElement = event.target;
+      let indexCurrentElement = Number(currentElement.getAttribute('data-index'));
 
-for (let i = 0; i < videoLevel2.length; i++) {
-  videoLevel2[i].addEventListener('click', function(event) {
-    let videoLevel2Headers = this.querySelectorAll('.video-level-2__header._open');
-    let currentElement = event.target;
-    let indexCurrentElement = Number(currentElement.getAttribute('data-index'));
-
-    openPlayer(makeVideoList(videoLevel2Headers), indexCurrentElement);
-  })
+      openPlayer(makeVideoList(videoLevel2Headers), indexCurrentElement);
+    })
+  }
 }
+
 
 function makeVideoList(videoLevel2Headers) {
   let videoList = [];

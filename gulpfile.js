@@ -77,14 +77,14 @@ gulp.task('css', function () {
     .pipe(browserSync.stream())
 });
 
-// gulp.task('css:host', function () {
-//   return gulp.src('src/design/styles/main.scss')
-//     .pipe(sass())
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(autoprefixer(['last 15 versions']))
-//     .pipe(cleancss())
-//     .pipe(gulp.dest('s:/host02/design/css'))
-// });
+gulp.task('css:host', function () {
+  return gulp.src('src/design/styles/main.scss')
+    .pipe(sass())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(autoprefixer(['last 15 versions']))
+    .pipe(cleancss())
+    .pipe(gulp.dest('s:/host02/design/css'))
+});
 
 gulp.task('css:build', function () {
   return gulp.src('src/design/styles/main.scss')
@@ -213,7 +213,7 @@ gulp.task('watch', function () {
   gulp.watch('src/design/styles/**/*.scss', gulp.series('css'));
   gulp.watch('src/design/styles/**/*.scss', gulp.series('css:build-host'));
   gulp.watch('src/design/js/**/*.js', gulp.series('js'));
-  gulp.watch('src/design/js/**/*.js', gulp.series('js:build-host'));
+  // gulp.watch('src/design/js/**/*.js', gulp.series('js:build-host'));
 });
 
 gulp.task('default', gulp.series(
@@ -224,10 +224,10 @@ gulp.task('default', gulp.series(
     'fonts',
     'css:libs',
     'css',
-    'css:build-host',
+    // 'css:build-host',
     'js:libs',
     'js',
-    'js:build-host',
+    // 'js:build-host',
     'watch',
     'browser-sync'
   )));
