@@ -323,7 +323,9 @@ $('.slider-v2__list').magnificPopup({
 
 try {
   if(modalNumber === 1) {
-    marginificInitialize('#offer1');
+    setTimeout(function() {
+      marginificInitialize('#offer1');
+    }, 5000)
   } else if (modalNumber === 2) {
     marginificInitialize('#offer2');
   }

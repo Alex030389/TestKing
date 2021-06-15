@@ -51,6 +51,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/design/fonts/'))
 });
 
+gulp.task('libsFolder', function () {
+  return gulp.src('src/design/libs/**/*')
+    .pipe(gulp.dest('dist/design/libs/'))
+});
+
 gulp.task('css:libs', function () {
   return gulp.src('src/design/styles/libs.scss')
     .pipe(sass())
@@ -77,15 +82,6 @@ gulp.task('css', function () {
     .pipe(browserSync.stream())
 });
 
-gulp.task('css:host', function () {
-  return gulp.src('src/design/styles/main.scss')
-    .pipe(sass())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(autoprefixer(['last 15 versions']))
-    .pipe(cleancss())
-    .pipe(gulp.dest('s:/host02/design/css'))
-});
-
 gulp.task('css:build', function () {
   return gulp.src('src/design/styles/main.scss')
     .pipe(sass().on("error", notify.onError()))
@@ -107,13 +103,8 @@ gulp.task('css:build-host', function () {
 
 gulp.task('js:libs', function () {
   return gulp.src([
-      // 'node_modules/jquery/dist/jquery.min.js',
-      // 'node_modules/svg4everybody/dist/svg4everybody.min.js',
-      // 'node_modules/selectric/public/jquery.selectric.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-      'node_modules/plyr/dist/plyr.polyfilled.min.js',
-      'node_modules/plyr/dist/plyr.min.js'
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -138,17 +129,6 @@ gulp.task('js', function () {
       stream: true
     }))
 });
-
-// gulp.task('js:host', function () {
-//   return gulp.src([
-//       'src/design/js/main.js',
-//     ])
-//     .pipe(babel({
-//       presets: ['@babel/env']
-//     }))
-//     .pipe(concat('main.min.js'))
-//     .pipe(gulp.dest('s:/host02/design/js/'))
-// });
 
 gulp.task('js:build', function () {
   return gulp.src([
@@ -211,7 +191,7 @@ gulp.task('img:build', function () {
 gulp.task('watch', function () {
   gulp.watch('src/pages/**/*.html', gulp.series('html'));
   gulp.watch('src/design/styles/**/*.scss', gulp.series('css'));
-  gulp.watch('src/design/styles/**/*.scss', gulp.series('css:build-host'));
+  // gulp.watch('src/design/styles/**/*.scss', gulp.series('css:build-host'));
   gulp.watch('src/design/js/**/*.js', gulp.series('js'));
   // gulp.watch('src/design/js/**/*.js', gulp.series('js:build-host'));
 });
@@ -222,6 +202,7 @@ gulp.task('default', gulp.series(
   gulp.parallel(
     'html',
     'fonts',
+    'libsFolder',
     'css:libs',
     'css',
     // 'css:build-host',
@@ -238,6 +219,7 @@ gulp.task('build', gulp.series(
   gulp.parallel(
     'html',
     'fonts',
+    'libsFolder',
     'css:libs',
     'css:build',
     'js:libs',

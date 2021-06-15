@@ -3,6 +3,7 @@
 
 //= modules/head.html
 
+<link rel="stylesheet" href="/design/libs/plyr/dist/plyr.css">
 
 
 <body>
@@ -17,7 +18,7 @@
       <section class="section _lite-grey _border">
 
 
-          <video poster="/design/images/poster.png" src="/design/video/video-1.mp4" id="player" controls></video>
+          <video width="100%" poster="/design/images/poster.png" src="/design/video/video-1.mp4" id="player" controls></video>
 
         </video>
 
@@ -28,8 +29,12 @@
   </main>
 
   //= modules/footer/footer.html
-  <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
-  <script src="https://cdn.plyr.io/3.5.6/plyr.polyfilled.js"></script>
+
+  <script src="/design/libs/plyr/dist/plyr.polyfilled.min.js"></script>
+
+  <script>
+    const player = new Plyr('#player');
+  </script>
   //= modules/scripts.html
 
 </body>

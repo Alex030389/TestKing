@@ -3,11 +3,93 @@
 
 //= modules/head.html
 
+<style>
+  .banner-discount {
+    background-color: #fff;
+    padding-top: 15px;
+    position: relative;
+  }
+  
+  .banner-discount__inner {
+    background-color: #e1ebf6;
+    border-radius: 5px;
+    margin-bottom: 0;
+    display: flex;
+    padding-right: 40px;
+  }
+  
+  .banner-discount__col-text {
+    text-align: center;
+    font-size: 18px;
+    color: #b8292f;
+    /* color: #2e5eb6; */
+    width: 75%;
+    padding-right: 20px;
+    line-height: 1.4;
+  }
+
+  .banner-discount__col-btn {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-discount__btn {
+    padding: 7px 14px;
+    width: 100px;
+  }
+
+  .banner-discount__close {
+    top: 15px;
+    right: 6px;
+  }
+
+  @media (max-width: 765px) {
+    .banner-discount__col-text {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .banner-discount__inner {
+      flex-direction: column;
+    }
+
+    .banner-discount__col-text {
+      padding-right: 0;
+      margin-bottom: 15px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .banner-discount__col-btn {
+      width: 100%;
+    }
+  }
+
+</style>
+
 <body>
 
   //= modules/header/header.html
 
   <main class="main">
+
+    <div class="banner-discount wrap">
+      <div class="banner-discount__inner section _border">
+        <div class="banner-discount__col-text">
+          Get 10% Discount on Your Purchase When You Sign Up for E-mail<br>
+          This is a ONE TIME OFFER. You will never see this Again<br>
+          Instant Discount 10% OFF
+        </div>
+        <div class="banner-discount__col-btn">
+          <button class="banner-discount__btn btn">Get</button>
+        </div>
+      </div><!--/banner-discount__inner-->
+      <button class="banner-discount__close modal__close"></button>
+    </div><!--/banner-discount-->
+
     <div class="wrap main-wrap">
       <div class="inner">
         <div class="content">
@@ -244,7 +326,18 @@
     <img src="/design/images/icon/arrow-up.png" alt="arrow-up">
   </button>
 
+  <!-- <script>
+    var modalNumber = 1;
+  </script> -->
+
   //= modules/scripts.html
+
+  <script>
+    $('.banner-discount__close').on('click', function() {
+      $('.banner-discount').hide();
+    })
+  </script>
+
 
 </body>
 
